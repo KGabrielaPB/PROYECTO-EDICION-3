@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32228.430
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PROYECTO_BINAES", "PROYECTO_BINAES\PROYECTO_BINAES.csproj", "{39C74A1B-B245-4C12-8711-0B88234DB123}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{39C74A1B-B245-4C12-8711-0B88234DB123}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39C74A1B-B245-4C12-8711-0B88234DB123}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39C74A1B-B245-4C12-8711-0B88234DB123}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39C74A1B-B245-4C12-8711-0B88234DB123}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {35C3466D-B25B-4FF9-8F5D-24D0F558020E}
+	EndGlobalSection
+EndGlobal
