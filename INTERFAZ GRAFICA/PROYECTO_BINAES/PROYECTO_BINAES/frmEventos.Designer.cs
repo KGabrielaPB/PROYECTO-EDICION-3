@@ -44,13 +44,10 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panelDecoracionMenu = new System.Windows.Forms.Panel();
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.mspInicioDeSesion = new System.Windows.Forms.MenuStrip();
             this.mspIniciodeSesión = new System.Windows.Forms.ToolStripMenuItem();
-            this.mspNosotros = new System.Windows.Forms.MenuStrip();
-            this.mspNosotros3 = new System.Windows.Forms.ToolStripMenuItem();
             this.mspServicios = new System.Windows.Forms.MenuStrip();
             this.mspServicios2 = new System.Windows.Forms.ToolStripMenuItem();
             this.mspPrestarEjemplares = new System.Windows.Forms.ToolStripMenuItem();
@@ -107,10 +104,10 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label18 = new System.Windows.Forms.Label();
             this.btnDesinscribirseCharlando = new System.Windows.Forms.Button();
             this.btnInscribirseCharlando = new System.Windows.Forms.Button();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panel13 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -134,13 +131,13 @@
             this.btnDesinscribirseFeriaTeatral = new System.Windows.Forms.Button();
             this.btnInscribirseFeria = new System.Windows.Forms.Button();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.btnDesinscribirseCine = new System.Windows.Forms.Button();
             this.btnInscribirseCine = new System.Windows.Forms.Button();
@@ -154,7 +151,6 @@
             this.mspAtras.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.mspInicioDeSesion.SuspendLayout();
-            this.mspNosotros.SuspendLayout();
             this.mspServicios.SuspendLayout();
             this.mspCatalogo.SuspendLayout();
             this.mspAreas.SuspendLayout();
@@ -260,11 +256,9 @@
             this.panelMenuVertical.Controls.Add(this.panel4);
             this.panelMenuVertical.Controls.Add(this.panel3);
             this.panelMenuVertical.Controls.Add(this.panel2);
-            this.panelMenuVertical.Controls.Add(this.panel1);
             this.panelMenuVertical.Controls.Add(this.panelDecoracionMenu);
             this.panelMenuVertical.Controls.Add(this.picLogo);
             this.panelMenuVertical.Controls.Add(this.mspInicioDeSesion);
-            this.panelMenuVertical.Controls.Add(this.mspNosotros);
             this.panelMenuVertical.Controls.Add(this.mspServicios);
             this.panelMenuVertical.Controls.Add(this.mspCatalogo);
             this.panelMenuVertical.Controls.Add(this.mspAreas);
@@ -279,7 +273,7 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel8.Location = new System.Drawing.Point(0, 538);
+            this.panel8.Location = new System.Drawing.Point(0, 485);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(5, 32);
             this.panel8.TabIndex = 11;
@@ -291,7 +285,7 @@
             this.mspAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mspAtras.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aTRASToolStripMenuItem});
-            this.mspAtras.Location = new System.Drawing.Point(9, 538);
+            this.mspAtras.Location = new System.Drawing.Point(9, 485);
             this.mspAtras.Name = "mspAtras";
             this.mspAtras.Size = new System.Drawing.Size(127, 32);
             this.mspAtras.TabIndex = 3;
@@ -312,7 +306,7 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel7.Location = new System.Drawing.Point(1, 485);
+            this.panel7.Location = new System.Drawing.Point(1, 432);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(5, 32);
             this.panel7.TabIndex = 10;
@@ -328,7 +322,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel5.Location = new System.Drawing.Point(1, 433);
+            this.panel5.Location = new System.Drawing.Point(1, 380);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(5, 32);
             this.panel5.TabIndex = 9;
@@ -336,7 +330,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel4.Location = new System.Drawing.Point(1, 374);
+            this.panel4.Location = new System.Drawing.Point(1, 321);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(5, 32);
             this.panel4.TabIndex = 7;
@@ -344,7 +338,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel3.Location = new System.Drawing.Point(1, 316);
+            this.panel3.Location = new System.Drawing.Point(1, 263);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(5, 32);
             this.panel3.TabIndex = 5;
@@ -352,18 +346,10 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel2.Location = new System.Drawing.Point(1, 254);
+            this.panel2.Location = new System.Drawing.Point(1, 201);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(5, 32);
             this.panel2.TabIndex = 3;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel1.Location = new System.Drawing.Point(0, 196);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(5, 32);
-            this.panel1.TabIndex = 1;
             // 
             // panelDecoracionMenu
             // 
@@ -408,39 +394,13 @@
             this.mspIniciodeSesión.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.mspIniciodeSesión.Click += new System.EventHandler(this.mspIniciodeSesión_Click);
             // 
-            // mspNosotros
-            // 
-            this.mspNosotros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.mspNosotros.Dock = System.Windows.Forms.DockStyle.None;
-            this.mspNosotros.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mspNosotros3});
-            this.mspNosotros.Location = new System.Drawing.Point(9, 204);
-            this.mspNosotros.Name = "mspNosotros";
-            this.mspNosotros.Size = new System.Drawing.Size(163, 32);
-            this.mspNosotros.TabIndex = 13;
-            this.mspNosotros.Text = "menuStrip2";
-            // 
-            // mspNosotros3
-            // 
-            this.mspNosotros3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.mspNosotros3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mspNosotros3.ForeColor = System.Drawing.Color.White;
-            this.mspNosotros3.Image = ((System.Drawing.Image)(resources.GetObject("mspNosotros3.Image")));
-            this.mspNosotros3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.mspNosotros3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.mspNosotros3.Name = "mspNosotros3";
-            this.mspNosotros3.Size = new System.Drawing.Size(155, 28);
-            this.mspNosotros3.Text = "     NOSOTROS";
-            this.mspNosotros3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.mspNosotros3.Click += new System.EventHandler(this.mspNosotros3_Click);
-            // 
             // mspServicios
             // 
             this.mspServicios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.mspServicios.Dock = System.Windows.Forms.DockStyle.None;
             this.mspServicios.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mspServicios2});
-            this.mspServicios.Location = new System.Drawing.Point(9, 258);
+            this.mspServicios.Location = new System.Drawing.Point(9, 201);
             this.mspServicios.Name = "mspServicios";
             this.mspServicios.Size = new System.Drawing.Size(162, 32);
             this.mspServicios.TabIndex = 14;
@@ -490,7 +450,7 @@
             this.mspCatalogo.Dock = System.Windows.Forms.DockStyle.None;
             this.mspCatalogo.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mspCatálogo});
-            this.mspCatalogo.Location = new System.Drawing.Point(9, 316);
+            this.mspCatalogo.Location = new System.Drawing.Point(9, 263);
             this.mspCatalogo.Name = "mspCatalogo";
             this.mspCatalogo.Size = new System.Drawing.Size(161, 32);
             this.mspCatalogo.TabIndex = 15;
@@ -515,7 +475,7 @@
             this.mspAreas.Dock = System.Windows.Forms.DockStyle.None;
             this.mspAreas.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mspÁreas});
-            this.mspAreas.Location = new System.Drawing.Point(9, 374);
+            this.mspAreas.Location = new System.Drawing.Point(9, 321);
             this.mspAreas.Name = "mspAreas";
             this.mspAreas.Size = new System.Drawing.Size(129, 32);
             this.mspAreas.TabIndex = 16;
@@ -540,7 +500,7 @@
             this.mspEventos.Dock = System.Windows.Forms.DockStyle.None;
             this.mspEventos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mspEventos2});
-            this.mspEventos.Location = new System.Drawing.Point(9, 433);
+            this.mspEventos.Location = new System.Drawing.Point(9, 380);
             this.mspEventos.Name = "mspEventos";
             this.mspEventos.Size = new System.Drawing.Size(149, 32);
             this.mspEventos.TabIndex = 17;
@@ -564,7 +524,7 @@
             this.mspRedesSociales.Dock = System.Windows.Forms.DockStyle.None;
             this.mspRedesSociales.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mspRedesSociales2});
-            this.mspRedesSociales.Location = new System.Drawing.Point(9, 485);
+            this.mspRedesSociales.Location = new System.Drawing.Point(9, 432);
             this.mspRedesSociales.Name = "mspRedesSociales";
             this.mspRedesSociales.Size = new System.Drawing.Size(215, 32);
             this.mspRedesSociales.TabIndex = 18;
@@ -1160,16 +1120,6 @@
             this.label17.TabIndex = 2;
             this.label17.Text = "Objetivos";
             // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(242, 61);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(200, 246);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 1;
-            this.pictureBox6.TabStop = false;
-            // 
             // label18
             // 
             this.label18.AutoSize = true;
@@ -1215,6 +1165,16 @@
             this.btnInscribirseCharlando.Text = "Inscribirse";
             this.btnInscribirseCharlando.UseVisualStyleBackColor = false;
             this.btnInscribirseCharlando.Click += new System.EventHandler(this.btnInscribirseCharlando_Click);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(242, 61);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(200, 246);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 1;
+            this.pictureBox6.TabStop = false;
             // 
             // panel13
             // 
@@ -1524,6 +1484,16 @@
             this.panel12.Size = new System.Drawing.Size(447, 312);
             this.panel12.TabIndex = 18;
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(260, 70);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(164, 169);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 1;
+            this.pictureBox4.TabStop = false;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -1592,16 +1562,6 @@
             this.label9.Size = new System.Drawing.Size(83, 20);
             this.label9.TabIndex = 2;
             this.label9.Text = "Objetivos";
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(260, 70);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(164, 169);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 1;
-            this.pictureBox4.TabStop = false;
             // 
             // label10
             // 
@@ -1686,8 +1646,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.mspInicioDeSesion.ResumeLayout(false);
             this.mspInicioDeSesion.PerformLayout();
-            this.mspNosotros.ResumeLayout(false);
-            this.mspNosotros.PerformLayout();
             this.mspServicios.ResumeLayout(false);
             this.mspServicios.PerformLayout();
             this.mspCatalogo.ResumeLayout(false);
@@ -1742,13 +1700,10 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panelDecoracionMenu;
         private System.Windows.Forms.PictureBox picLogo;
         private System.Windows.Forms.MenuStrip mspInicioDeSesion;
         private System.Windows.Forms.ToolStripMenuItem mspIniciodeSesión;
-        private System.Windows.Forms.MenuStrip mspNosotros;
-        private System.Windows.Forms.ToolStripMenuItem mspNosotros3;
         private System.Windows.Forms.MenuStrip mspServicios;
         private System.Windows.Forms.ToolStripMenuItem mspServicios2;
         private System.Windows.Forms.MenuStrip mspCatalogo;
