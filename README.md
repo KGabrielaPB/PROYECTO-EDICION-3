@@ -8,18 +8,18 @@
 ### :grey_exclamation: CONTENIDO
 You're sections headers will be used to reference location of destination.
 
-- [Descripcion](#descripcion)
-- [Se Utilizo](#Se-Utilizo)
-- [¿Como se instala?](#como-instalar)
-- [¿Que programas debemos de utilizar?](#programas)
-- [Links de descargas](#links)
-- [Integrantes](#integrantes)
+- :mag_right: [Descripcion](#descripcion)
+- :mag_right: [Se Utilizo](#Se-Utilizo)
+- :mag_right: [¿Como se instala?](#como-instalar)
+- :mag_right: [¿Que programas debemos de utilizar?](#programas)
+- :mag_right: [Links de descargas](#links)
+- :mag_right: [Integrantes](#integrantes)
 
 ---
 
 ## :grey_exclamation: Descripcion
 
-El programa fue creado para la facilitacion de la busqueda de libros, documentacion y videos,
+:bulb: El programa fue creado para la facilitacion de la busqueda de libros, documentacion y videos,
 para el uso academico.
 
 #### :grey_exclamation: Se Utilizo
@@ -41,28 +41,29 @@ para el uso academico.
 5. Abrimos los archivos con sus respectivos programas.
 
 #### :grey_exclamation: ¿Que programas debemos de utilizar?
-Se recomienda utilizar Visual Studio Community 2022 para la parte de la Interfaz Grafica
+:mega: Se recomienda utilizar Visual Studio Community 2022 para la parte de la Interfaz Grafica
 sin embargo podemos utilizar JetBrains Rider.
 
-Se recomienda utilizar Microsoft SQL Server para la parte de la Base De Datos
+:mega: Se recomienda utilizar Microsoft SQL Server para la parte de la Base De Datos
 
 [Back To The Top](#read-me-template)
 
 ---
 
 ## :grey_exclamation: Links de descargas
-- [Visual Studio Community 2022](https://visualstudio.microsoft.com/es/vs/)
-- [Microsoft SQL Server](https://www.microsoft.com/es-es/sql-server/sql-server-downloads)
-- [JetBrains Rider](https://www.jetbrains.com/es-es/rider/)
-- [Back To The Top](#read-me-template)
+- :zap: [Visual Studio Community 2022](https://visualstudio.microsoft.com/es/vs/)
+- :zap: [Microsoft SQL Server](https://www.microsoft.com/es-es/sql-server/sql-server-downloads)
+- :zap: [JetBrains Rider](https://www.jetbrains.com/es-es/rider/)
+- :zap: [Back To The Top](#read-me-template)
 
 
 ---
 
 ## :grey_exclamation: Integrantes
 
-- 00141621 - [Katherin Gabriela Perez Baires](https://github.com/KGabrielaPB)
-- 00162121 - [Alexandra Beatriz Rivera Mendez](https://github.com/Alexandra-Rivera)
-- 00174221 - [Diego Antonio Merlos Beria](https://github.com/ElMerlinJr)
-- 00236921 - [Pablo Alejandro Pérez Pino](https://github.com/PabloJr02)
-- [Back To The Top](#read-me-template)
+- 00141621 -  :girl: [Katherin Gabriela Perez Baires](https://github.com/KGabrielaPB)
+- 00162121 - :girl:  [Alexandra Beatriz Rivera Mendez](https://github.com/Alexandra-Rivera)
+- 00174221 -  :boy: [Diego Antonio Merlos Beria](https://github.com/ElMerlinJr)
+- 00236921 -   :boy: [Pablo Alejandro Pérez Pino](https://github.com/PabloJr02)
+
+ [Back To The Top](#read-me-template)
