@@ -3,11 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
+using System.Data;
+using System.Resources; 
 
 namespace PROYECTO_BINAES
 {
     internal class EventoDAO
     {
+
+        
        /* public static bool AgregarEvento()
         {
             

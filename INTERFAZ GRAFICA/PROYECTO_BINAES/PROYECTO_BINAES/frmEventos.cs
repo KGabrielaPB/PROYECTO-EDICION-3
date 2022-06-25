@@ -117,12 +117,7 @@ namespace PROYECTO_BINAES
 
         }
 
-        //SALIR DEL FORMULARIO
-        private void aTRASToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Dispose(); 
-        }
-
+        //CODIFICACIONES DE BOTONES DE EVENTO
         private void frmEventos_Load(object sender, EventArgs e)
         {
             btnDesinscribirseFeriadelLibro.Visible = false;
@@ -217,6 +212,12 @@ namespace PROYECTO_BINAES
         {
             btnDesinscribirseFeriaTeatral.Visible = false;
             btnInscribirseFeriaTeatral.Visible = true;
+        }
+
+        //SALIR DEL FORMULARIO
+        private void aTRASToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }
