@@ -149,6 +149,7 @@
             this.btnRestaurar2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnRestaurar2.TabIndex = 7;
             this.btnRestaurar2.TabStop = false;
+            this.btnRestaurar2.Visible = false;
             this.btnRestaurar2.Click += new System.EventHandler(this.btnRestaurar2_Click_1);
             // 
             // btnMaximizar2
@@ -163,7 +164,6 @@
             this.btnMaximizar2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnMaximizar2.TabIndex = 8;
             this.btnMaximizar2.TabStop = false;
-            this.btnMaximizar2.Visible = false;
             this.btnMaximizar2.Click += new System.EventHandler(this.btnMaximizar2_Click_1);
             // 
             // panelMenuVertical

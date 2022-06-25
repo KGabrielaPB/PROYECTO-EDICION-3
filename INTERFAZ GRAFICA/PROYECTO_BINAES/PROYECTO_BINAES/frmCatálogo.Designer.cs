@@ -488,7 +488,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(45)))));
-            this.panel1.Location = new System.Drawing.Point(223, 38);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(227, 38);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(302, 612);
             this.panel1.TabIndex = 5;
@@ -496,9 +497,10 @@
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(55)))));
-            this.panel9.Location = new System.Drawing.Point(523, 38);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel9.Location = new System.Drawing.Point(529, 38);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(777, 677);
+            this.panel9.Size = new System.Drawing.Size(771, 612);
             this.panel9.TabIndex = 6;
             // 
             // frmCatálogo
@@ -513,6 +515,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCatálogo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Catálogo";
             this.panelBarraTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();

@@ -16,5 +16,11 @@ namespace PROYECTO_BINAES
         {
             InitializeComponent();
         }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
+    
 }
