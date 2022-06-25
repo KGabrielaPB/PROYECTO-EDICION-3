@@ -642,7 +642,7 @@
 </value>
   </data>
   <metadata name="mspAtras.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>864, 56</value>
+    <value>901, 79</value>
   </metadata>
   <data name="aTRASToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2000,7 +2000,7 @@
   <data name="mspFacebook.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        qQAAAKkBq7NRIgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAIXSURBVEhLpZW/
+        qAAAAKgBefSzxgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAIXSURBVEhLpZW/
         T9tAFMf9T3SgBcR/0CZ21A7sVeRzmoG/ACZKS7du3ZBoZB8hYSi/hRgZkVKitkgIlm5d2pIoU6VWiQBF
         yo8SSGKOd8fROvYjNs5X+kjOvXffF5/f3Sn9pBrvR1Xdeq0SKw8UgKaEP+c1Yr6KvaAjMj24HpOFR5ph
         rYBJF2A+2Kph7TxJpsfk9P6C5CRMarhMglDXdJqQNrgg6Q1gOybdF3gbc1ba9Ur+80HMb7E9b/I0nhqG
@@ -2016,7 +2016,7 @@
   <data name="mspTwitter.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        qQAAAKkBq7NRIgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAKySURBVEhLpZVL
+        qAAAAKgBefSzxgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAKySURBVEhLpZVL
         bxJRFMfvxq2uNLE+E6MfwMQP4NJEjSvjmoUbbd25NcaF7yqJiCitLQWmxYVRI6UaHwlWrdhqmlIoMDO0
         xDSlnVgebSkwPT135mKZYWYA+0/+CbmP3+Gee+ZcYqkAf5D4hU50CB1HF5np7xDxCZcJlzrAVrehQGYf
         4QQXQqpoaGIZ1wYIJx5mu5vIL57DTQUdpBXnMdBZRjGRT7yCC2XdxnaMpxG7GE0n9Z9vB14zTZnuJN7k
@@ -2034,7 +2034,7 @@
   <data name="mspInstagram.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        qQAAAKkBq7NRIgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAOwSURBVEhLxZRb
+        qAAAAKgBefSzxgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAOwSURBVEhLxZRb
         TBNpHMVHosYbGCNsFI1o4u3BBLLiPTGr6L7sm3GfJFHAakJi1JfNZrOxA7sm4g10UZCIuNnFyqURFdF4
         F9EoJUJrxkCxFsFOp1Qqpa2llH7Hb6YfWJhK0BfPa+c7v/zP//zLfXeB42PuxNWtvT7tnkY/5Ym2fLJB
         WzapWXOOE9bwHGLYZ1+v1vjSWFO8LrdxVrX98cxruBN7C7XT70M/tQHlkxtxYWILimJeiQVce04e1xrL

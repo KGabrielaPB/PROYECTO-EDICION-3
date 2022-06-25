@@ -63,6 +63,8 @@
             this.mspFacebook = new System.Windows.Forms.ToolStripMenuItem();
             this.mspTwitter = new System.Windows.Forms.ToolStripMenuItem();
             this.mspInstagram = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.panelBarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
@@ -172,7 +174,7 @@
             this.panelMenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenuVertical.Location = new System.Drawing.Point(0, 38);
             this.panelMenuVertical.Name = "panelMenuVertical";
-            this.panelMenuVertical.Size = new System.Drawing.Size(217, 612);
+            this.panelMenuVertical.Size = new System.Drawing.Size(227, 612);
             this.panelMenuVertical.TabIndex = 4;
             // 
             // panel8
@@ -268,7 +270,7 @@
             this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
             this.picLogo.Location = new System.Drawing.Point(0, 0);
             this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(220, 112);
+            this.picLogo.Size = new System.Drawing.Size(227, 112);
             this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picLogo.TabIndex = 0;
             this.picLogo.TabStop = false;
@@ -483,11 +485,29 @@
             this.mspInstagram.Text = "Instagram";
             this.mspInstagram.Click += new System.EventHandler(this.mspInstagram_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(45)))));
+            this.panel1.Location = new System.Drawing.Point(223, 38);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(302, 612);
+            this.panel1.TabIndex = 5;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(55)))));
+            this.panel9.Location = new System.Drawing.Point(523, 38);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(777, 677);
+            this.panel9.TabIndex = 6;
+            // 
             // frmCatálogo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1300, 650);
+            this.Controls.Add(this.panel9);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelMenuVertical);
             this.Controls.Add(this.panelBarraTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -556,5 +576,7 @@
         private System.Windows.Forms.ToolStripMenuItem mspInstagram;
         private System.Windows.Forms.ToolStripMenuItem mspPrestarEjemplares;
         private System.Windows.Forms.ToolStripMenuItem mspReservarEjemplares;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel9;
     }
 }
