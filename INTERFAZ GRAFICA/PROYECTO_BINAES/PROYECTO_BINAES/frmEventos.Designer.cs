@@ -63,7 +63,7 @@
             this.mspFacebook = new System.Windows.Forms.ToolStripMenuItem();
             this.mspTwitter = new System.Windows.Forms.ToolStripMenuItem();
             this.mspInstagram = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel9 = new System.Windows.Forms.Panel();
+            this.panelJyD = new System.Windows.Forms.Panel();
             this.lblHorarioNum = new System.Windows.Forms.Label();
             this.lblHorario = new System.Windows.Forms.Label();
             this.txtObjetivos = new System.Windows.Forms.TextBox();
@@ -75,7 +75,7 @@
             this.btnDesinscribirseJyD = new System.Windows.Forms.Button();
             this.btnInscribirseJyD = new System.Windows.Forms.Button();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.panel16 = new System.Windows.Forms.Panel();
+            this.panelFeriadelLibro = new System.Windows.Forms.Panel();
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -86,7 +86,7 @@
             this.label36 = new System.Windows.Forms.Label();
             this.btnDesinscribirseFeriadelLibro = new System.Windows.Forms.Button();
             this.btnInscribirseFeriadelLibro = new System.Windows.Forms.Button();
-            this.panel15 = new System.Windows.Forms.Panel();
+            this.panelCONIA = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -97,7 +97,7 @@
             this.label30 = new System.Windows.Forms.Label();
             this.btnDesinscribirseCONIA = new System.Windows.Forms.Button();
             this.btnInscribirseCONIA = new System.Windows.Forms.Button();
-            this.panel14 = new System.Windows.Forms.Panel();
+            this.panelCharlando = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -108,7 +108,7 @@
             this.btnDesinscribirseCharlando = new System.Windows.Forms.Button();
             this.btnInscribirseCharlando = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.panel13 = new System.Windows.Forms.Panel();
+            this.panelJuegosVR = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -117,9 +117,9 @@
             this.label25 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label26 = new System.Windows.Forms.Label();
+            this.btnInscribirseJuegosVR = new System.Windows.Forms.Button();
             this.btnDesinscribirseJuegosVR = new System.Windows.Forms.Button();
-            this.btnInscribirseFeriaTeatral = new System.Windows.Forms.Button();
-            this.panel10 = new System.Windows.Forms.Panel();
+            this.panelFeriaTeatral = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -129,8 +129,8 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label22 = new System.Windows.Forms.Label();
             this.btnDesinscribirseFeriaTeatral = new System.Windows.Forms.Button();
-            this.btnInscribirseFeria = new System.Windows.Forms.Button();
-            this.panel12 = new System.Windows.Forms.Panel();
+            this.btnInscribirseFeriaTeatral = new System.Windows.Forms.Button();
+            this.panelCine = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -156,20 +156,20 @@
             this.mspAreas.SuspendLayout();
             this.mspEventos.SuspendLayout();
             this.mspRedesSociales.SuspendLayout();
-            this.panel9.SuspendLayout();
+            this.panelJyD.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel11.SuspendLayout();
-            this.panel16.SuspendLayout();
+            this.panelFeriadelLibro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            this.panel15.SuspendLayout();
+            this.panelCONIA.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            this.panel14.SuspendLayout();
+            this.panelCharlando.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            this.panel13.SuspendLayout();
+            this.panelJuegosVR.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            this.panel10.SuspendLayout();
+            this.panelFeriaTeatral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panel12.SuspendLayout();
+            this.panelCine.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -579,24 +579,24 @@
             this.mspInstagram.Text = "Instagram";
             this.mspInstagram.Click += new System.EventHandler(this.mspInstagram_Click);
             // 
-            // panel9
+            // panelJyD
             // 
-            this.panel9.BackColor = System.Drawing.Color.FloralWhite;
-            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel9.Controls.Add(this.lblHorarioNum);
-            this.panel9.Controls.Add(this.lblHorario);
-            this.panel9.Controls.Add(this.txtObjetivos);
-            this.panel9.Controls.Add(this.lblCantidadNumerica);
-            this.panel9.Controls.Add(this.lblCantidad);
-            this.panel9.Controls.Add(this.lblObjetivos);
-            this.panel9.Controls.Add(this.pictureBox2);
-            this.panel9.Controls.Add(this.lblTitulo);
-            this.panel9.Controls.Add(this.btnDesinscribirseJyD);
-            this.panel9.Controls.Add(this.btnInscribirseJyD);
-            this.panel9.Location = new System.Drawing.Point(68, 1166);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(447, 312);
-            this.panel9.TabIndex = 7;
+            this.panelJyD.BackColor = System.Drawing.Color.FloralWhite;
+            this.panelJyD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelJyD.Controls.Add(this.lblHorarioNum);
+            this.panelJyD.Controls.Add(this.lblHorario);
+            this.panelJyD.Controls.Add(this.txtObjetivos);
+            this.panelJyD.Controls.Add(this.lblCantidadNumerica);
+            this.panelJyD.Controls.Add(this.lblCantidad);
+            this.panelJyD.Controls.Add(this.lblObjetivos);
+            this.panelJyD.Controls.Add(this.pictureBox2);
+            this.panelJyD.Controls.Add(this.lblTitulo);
+            this.panelJyD.Controls.Add(this.btnDesinscribirseJyD);
+            this.panelJyD.Controls.Add(this.btnInscribirseJyD);
+            this.panelJyD.Location = new System.Drawing.Point(68, 1166);
+            this.panelJyD.Name = "panelJyD";
+            this.panelJyD.Size = new System.Drawing.Size(447, 312);
+            this.panelJyD.TabIndex = 7;
             // 
             // lblHorarioNum
             // 
@@ -730,13 +730,13 @@
             this.panel11.AutoScroll = true;
             this.panel11.AutoSize = true;
             this.panel11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel11.Controls.Add(this.panel16);
-            this.panel11.Controls.Add(this.panel15);
-            this.panel11.Controls.Add(this.panel14);
-            this.panel11.Controls.Add(this.panel13);
-            this.panel11.Controls.Add(this.panel10);
-            this.panel11.Controls.Add(this.panel12);
-            this.panel11.Controls.Add(this.panel9);
+            this.panel11.Controls.Add(this.panelFeriadelLibro);
+            this.panel11.Controls.Add(this.panelCONIA);
+            this.panel11.Controls.Add(this.panelCharlando);
+            this.panel11.Controls.Add(this.panelJuegosVR);
+            this.panel11.Controls.Add(this.panelFeriaTeatral);
+            this.panel11.Controls.Add(this.panelCine);
+            this.panel11.Controls.Add(this.panelJyD);
             this.panel11.Controls.Add(this.pictureBox1);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel11.Location = new System.Drawing.Point(217, 38);
@@ -744,24 +744,24 @@
             this.panel11.Size = new System.Drawing.Size(1083, 612);
             this.panel11.TabIndex = 10;
             // 
-            // panel16
+            // panelFeriadelLibro
             // 
-            this.panel16.BackColor = System.Drawing.Color.FloralWhite;
-            this.panel16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel16.Controls.Add(this.label31);
-            this.panel16.Controls.Add(this.label32);
-            this.panel16.Controls.Add(this.textBox6);
-            this.panel16.Controls.Add(this.label33);
-            this.panel16.Controls.Add(this.label34);
-            this.panel16.Controls.Add(this.label35);
-            this.panel16.Controls.Add(this.pictureBox8);
-            this.panel16.Controls.Add(this.label36);
-            this.panel16.Controls.Add(this.btnDesinscribirseFeriadelLibro);
-            this.panel16.Controls.Add(this.btnInscribirseFeriadelLibro);
-            this.panel16.Location = new System.Drawing.Point(68, 128);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(447, 312);
-            this.panel16.TabIndex = 21;
+            this.panelFeriadelLibro.BackColor = System.Drawing.Color.FloralWhite;
+            this.panelFeriadelLibro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelFeriadelLibro.Controls.Add(this.label31);
+            this.panelFeriadelLibro.Controls.Add(this.label32);
+            this.panelFeriadelLibro.Controls.Add(this.textBox6);
+            this.panelFeriadelLibro.Controls.Add(this.label33);
+            this.panelFeriadelLibro.Controls.Add(this.label34);
+            this.panelFeriadelLibro.Controls.Add(this.label35);
+            this.panelFeriadelLibro.Controls.Add(this.pictureBox8);
+            this.panelFeriadelLibro.Controls.Add(this.label36);
+            this.panelFeriadelLibro.Controls.Add(this.btnDesinscribirseFeriadelLibro);
+            this.panelFeriadelLibro.Controls.Add(this.btnInscribirseFeriadelLibro);
+            this.panelFeriadelLibro.Location = new System.Drawing.Point(68, 128);
+            this.panelFeriadelLibro.Name = "panelFeriadelLibro";
+            this.panelFeriadelLibro.Size = new System.Drawing.Size(447, 312);
+            this.panelFeriadelLibro.TabIndex = 21;
             // 
             // label31
             // 
@@ -888,24 +888,24 @@
             this.btnInscribirseFeriadelLibro.UseVisualStyleBackColor = false;
             this.btnInscribirseFeriadelLibro.Click += new System.EventHandler(this.btnInscribirseFeriadelLibro_Click);
             // 
-            // panel15
+            // panelCONIA
             // 
-            this.panel15.BackColor = System.Drawing.Color.FloralWhite;
-            this.panel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel15.Controls.Add(this.label19);
-            this.panel15.Controls.Add(this.label20);
-            this.panel15.Controls.Add(this.textBox5);
-            this.panel15.Controls.Add(this.label27);
-            this.panel15.Controls.Add(this.label28);
-            this.panel15.Controls.Add(this.label29);
-            this.panel15.Controls.Add(this.pictureBox7);
-            this.panel15.Controls.Add(this.label30);
-            this.panel15.Controls.Add(this.btnDesinscribirseCONIA);
-            this.panel15.Controls.Add(this.btnInscribirseCONIA);
-            this.panel15.Location = new System.Drawing.Point(551, 128);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(447, 312);
-            this.panel15.TabIndex = 20;
+            this.panelCONIA.BackColor = System.Drawing.Color.FloralWhite;
+            this.panelCONIA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelCONIA.Controls.Add(this.label19);
+            this.panelCONIA.Controls.Add(this.label20);
+            this.panelCONIA.Controls.Add(this.textBox5);
+            this.panelCONIA.Controls.Add(this.label27);
+            this.panelCONIA.Controls.Add(this.label28);
+            this.panelCONIA.Controls.Add(this.label29);
+            this.panelCONIA.Controls.Add(this.pictureBox7);
+            this.panelCONIA.Controls.Add(this.label30);
+            this.panelCONIA.Controls.Add(this.btnDesinscribirseCONIA);
+            this.panelCONIA.Controls.Add(this.btnInscribirseCONIA);
+            this.panelCONIA.Location = new System.Drawing.Point(551, 128);
+            this.panelCONIA.Name = "panelCONIA";
+            this.panelCONIA.Size = new System.Drawing.Size(447, 312);
+            this.panelCONIA.TabIndex = 20;
             // 
             // label19
             // 
@@ -1032,24 +1032,24 @@
             this.btnInscribirseCONIA.UseVisualStyleBackColor = false;
             this.btnInscribirseCONIA.Click += new System.EventHandler(this.btnInscribirseCONIA_Click);
             // 
-            // panel14
+            // panelCharlando
             // 
-            this.panel14.BackColor = System.Drawing.Color.FloralWhite;
-            this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel14.Controls.Add(this.label13);
-            this.panel14.Controls.Add(this.label14);
-            this.panel14.Controls.Add(this.textBox4);
-            this.panel14.Controls.Add(this.label15);
-            this.panel14.Controls.Add(this.label16);
-            this.panel14.Controls.Add(this.label17);
-            this.panel14.Controls.Add(this.label18);
-            this.panel14.Controls.Add(this.btnDesinscribirseCharlando);
-            this.panel14.Controls.Add(this.btnInscribirseCharlando);
-            this.panel14.Controls.Add(this.pictureBox6);
-            this.panel14.Location = new System.Drawing.Point(68, 463);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(447, 312);
-            this.panel14.TabIndex = 19;
+            this.panelCharlando.BackColor = System.Drawing.Color.FloralWhite;
+            this.panelCharlando.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelCharlando.Controls.Add(this.label13);
+            this.panelCharlando.Controls.Add(this.label14);
+            this.panelCharlando.Controls.Add(this.textBox4);
+            this.panelCharlando.Controls.Add(this.label15);
+            this.panelCharlando.Controls.Add(this.label16);
+            this.panelCharlando.Controls.Add(this.label17);
+            this.panelCharlando.Controls.Add(this.label18);
+            this.panelCharlando.Controls.Add(this.btnDesinscribirseCharlando);
+            this.panelCharlando.Controls.Add(this.btnInscribirseCharlando);
+            this.panelCharlando.Controls.Add(this.pictureBox6);
+            this.panelCharlando.Location = new System.Drawing.Point(68, 463);
+            this.panelCharlando.Name = "panelCharlando";
+            this.panelCharlando.Size = new System.Drawing.Size(447, 312);
+            this.panelCharlando.TabIndex = 19;
             // 
             // label13
             // 
@@ -1176,24 +1176,24 @@
             this.pictureBox6.TabIndex = 1;
             this.pictureBox6.TabStop = false;
             // 
-            // panel13
+            // panelJuegosVR
             // 
-            this.panel13.BackColor = System.Drawing.Color.FloralWhite;
-            this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel13.Controls.Add(this.label11);
-            this.panel13.Controls.Add(this.label12);
-            this.panel13.Controls.Add(this.textBox3);
-            this.panel13.Controls.Add(this.label23);
-            this.panel13.Controls.Add(this.label24);
-            this.panel13.Controls.Add(this.label25);
-            this.panel13.Controls.Add(this.pictureBox5);
-            this.panel13.Controls.Add(this.label26);
-            this.panel13.Controls.Add(this.btnDesinscribirseJuegosVR);
-            this.panel13.Controls.Add(this.btnInscribirseFeriaTeatral);
-            this.panel13.Location = new System.Drawing.Point(551, 463);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(447, 312);
-            this.panel13.TabIndex = 19;
+            this.panelJuegosVR.BackColor = System.Drawing.Color.FloralWhite;
+            this.panelJuegosVR.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelJuegosVR.Controls.Add(this.label11);
+            this.panelJuegosVR.Controls.Add(this.label12);
+            this.panelJuegosVR.Controls.Add(this.textBox3);
+            this.panelJuegosVR.Controls.Add(this.label23);
+            this.panelJuegosVR.Controls.Add(this.label24);
+            this.panelJuegosVR.Controls.Add(this.label25);
+            this.panelJuegosVR.Controls.Add(this.pictureBox5);
+            this.panelJuegosVR.Controls.Add(this.label26);
+            this.panelJuegosVR.Controls.Add(this.btnDesinscribirseJuegosVR);
+            this.panelJuegosVR.Controls.Add(this.btnInscribirseJuegosVR);
+            this.panelJuegosVR.Location = new System.Drawing.Point(551, 463);
+            this.panelJuegosVR.Name = "panelJuegosVR";
+            this.panelJuegosVR.Size = new System.Drawing.Size(447, 312);
+            this.panelJuegosVR.TabIndex = 19;
             // 
             // label11
             // 
@@ -1286,6 +1286,23 @@
             this.label26.TabIndex = 0;
             this.label26.Text = "Juegos VR";
             // 
+            // btnInscribirseJuegosVR
+            // 
+            this.btnInscribirseJuegosVR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(165)))), ((int)(((byte)(179)))));
+            this.btnInscribirseJuegosVR.FlatAppearance.BorderSize = 0;
+            this.btnInscribirseJuegosVR.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnInscribirseJuegosVR.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(109)))), ((int)(((byte)(118)))));
+            this.btnInscribirseJuegosVR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInscribirseJuegosVR.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInscribirseJuegosVR.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnInscribirseJuegosVR.Location = new System.Drawing.Point(27, 254);
+            this.btnInscribirseJuegosVR.Name = "btnInscribirseJuegosVR";
+            this.btnInscribirseJuegosVR.Size = new System.Drawing.Size(233, 33);
+            this.btnInscribirseJuegosVR.TabIndex = 6;
+            this.btnInscribirseJuegosVR.Text = "Inscribirse";
+            this.btnInscribirseJuegosVR.UseVisualStyleBackColor = false;
+            this.btnInscribirseJuegosVR.Click += new System.EventHandler(this.btnInscribirseJuegosVR_Click);
+            // 
             // btnDesinscribirseJuegosVR
             // 
             this.btnDesinscribirseJuegosVR.BackColor = System.Drawing.Color.DarkGray;
@@ -1304,41 +1321,24 @@
             this.btnDesinscribirseJuegosVR.Visible = false;
             this.btnDesinscribirseJuegosVR.Click += new System.EventHandler(this.btnDesinscribirseJuegosVR_Click);
             // 
-            // btnInscribirseFeriaTeatral
+            // panelFeriaTeatral
             // 
-            this.btnInscribirseFeriaTeatral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(165)))), ((int)(((byte)(179)))));
-            this.btnInscribirseFeriaTeatral.FlatAppearance.BorderSize = 0;
-            this.btnInscribirseFeriaTeatral.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnInscribirseFeriaTeatral.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(109)))), ((int)(((byte)(118)))));
-            this.btnInscribirseFeriaTeatral.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInscribirseFeriaTeatral.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInscribirseFeriaTeatral.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnInscribirseFeriaTeatral.Location = new System.Drawing.Point(27, 254);
-            this.btnInscribirseFeriaTeatral.Name = "btnInscribirseFeriaTeatral";
-            this.btnInscribirseFeriaTeatral.Size = new System.Drawing.Size(233, 33);
-            this.btnInscribirseFeriaTeatral.TabIndex = 6;
-            this.btnInscribirseFeriaTeatral.Text = "Inscribirse";
-            this.btnInscribirseFeriaTeatral.UseVisualStyleBackColor = false;
-            this.btnInscribirseFeriaTeatral.Click += new System.EventHandler(this.btnInscribirseFeriaTeatral_Click);
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.FloralWhite;
-            this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel10.Controls.Add(this.label1);
-            this.panel10.Controls.Add(this.label2);
-            this.panel10.Controls.Add(this.textBox1);
-            this.panel10.Controls.Add(this.label3);
-            this.panel10.Controls.Add(this.label4);
-            this.panel10.Controls.Add(this.label21);
-            this.panel10.Controls.Add(this.pictureBox3);
-            this.panel10.Controls.Add(this.label22);
-            this.panel10.Controls.Add(this.btnDesinscribirseFeriaTeatral);
-            this.panel10.Controls.Add(this.btnInscribirseFeria);
-            this.panel10.Location = new System.Drawing.Point(551, 819);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(447, 312);
-            this.panel10.TabIndex = 17;
+            this.panelFeriaTeatral.BackColor = System.Drawing.Color.FloralWhite;
+            this.panelFeriaTeatral.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelFeriaTeatral.Controls.Add(this.label1);
+            this.panelFeriaTeatral.Controls.Add(this.label2);
+            this.panelFeriaTeatral.Controls.Add(this.textBox1);
+            this.panelFeriaTeatral.Controls.Add(this.label3);
+            this.panelFeriaTeatral.Controls.Add(this.label4);
+            this.panelFeriaTeatral.Controls.Add(this.label21);
+            this.panelFeriaTeatral.Controls.Add(this.pictureBox3);
+            this.panelFeriaTeatral.Controls.Add(this.label22);
+            this.panelFeriaTeatral.Controls.Add(this.btnDesinscribirseFeriaTeatral);
+            this.panelFeriaTeatral.Controls.Add(this.btnInscribirseFeriaTeatral);
+            this.panelFeriaTeatral.Location = new System.Drawing.Point(551, 819);
+            this.panelFeriaTeatral.Name = "panelFeriaTeatral";
+            this.panelFeriaTeatral.Size = new System.Drawing.Size(447, 312);
+            this.panelFeriaTeatral.TabIndex = 17;
             // 
             // label1
             // 
@@ -1448,41 +1448,41 @@
             this.btnDesinscribirseFeriaTeatral.Visible = false;
             this.btnDesinscribirseFeriaTeatral.Click += new System.EventHandler(this.btnDesinscribirseFeriaTeatral_Click);
             // 
-            // btnInscribirseFeria
+            // btnInscribirseFeriaTeatral
             // 
-            this.btnInscribirseFeria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(165)))), ((int)(((byte)(179)))));
-            this.btnInscribirseFeria.FlatAppearance.BorderSize = 0;
-            this.btnInscribirseFeria.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnInscribirseFeria.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(109)))), ((int)(((byte)(118)))));
-            this.btnInscribirseFeria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInscribirseFeria.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInscribirseFeria.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnInscribirseFeria.Location = new System.Drawing.Point(27, 254);
-            this.btnInscribirseFeria.Name = "btnInscribirseFeria";
-            this.btnInscribirseFeria.Size = new System.Drawing.Size(233, 33);
-            this.btnInscribirseFeria.TabIndex = 6;
-            this.btnInscribirseFeria.Text = "Inscribirse";
-            this.btnInscribirseFeria.UseVisualStyleBackColor = false;
-            this.btnInscribirseFeria.Click += new System.EventHandler(this.btnInscribirseFeria_Click);
+            this.btnInscribirseFeriaTeatral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(165)))), ((int)(((byte)(179)))));
+            this.btnInscribirseFeriaTeatral.FlatAppearance.BorderSize = 0;
+            this.btnInscribirseFeriaTeatral.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnInscribirseFeriaTeatral.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(109)))), ((int)(((byte)(118)))));
+            this.btnInscribirseFeriaTeatral.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInscribirseFeriaTeatral.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInscribirseFeriaTeatral.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnInscribirseFeriaTeatral.Location = new System.Drawing.Point(27, 254);
+            this.btnInscribirseFeriaTeatral.Name = "btnInscribirseFeriaTeatral";
+            this.btnInscribirseFeriaTeatral.Size = new System.Drawing.Size(233, 33);
+            this.btnInscribirseFeriaTeatral.TabIndex = 6;
+            this.btnInscribirseFeriaTeatral.Text = "Inscribirse";
+            this.btnInscribirseFeriaTeatral.UseVisualStyleBackColor = false;
+            this.btnInscribirseFeriaTeatral.Click += new System.EventHandler(this.btnInscribirseFeriaTeatral_Click);
             // 
-            // panel12
+            // panelCine
             // 
-            this.panel12.BackColor = System.Drawing.Color.FloralWhite;
-            this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel12.Controls.Add(this.pictureBox4);
-            this.panel12.Controls.Add(this.label5);
-            this.panel12.Controls.Add(this.label6);
-            this.panel12.Controls.Add(this.textBox2);
-            this.panel12.Controls.Add(this.label7);
-            this.panel12.Controls.Add(this.label8);
-            this.panel12.Controls.Add(this.label9);
-            this.panel12.Controls.Add(this.label10);
-            this.panel12.Controls.Add(this.btnDesinscribirseCine);
-            this.panel12.Controls.Add(this.btnInscribirseCine);
-            this.panel12.Location = new System.Drawing.Point(68, 819);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(447, 312);
-            this.panel12.TabIndex = 18;
+            this.panelCine.BackColor = System.Drawing.Color.FloralWhite;
+            this.panelCine.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelCine.Controls.Add(this.pictureBox4);
+            this.panelCine.Controls.Add(this.label5);
+            this.panelCine.Controls.Add(this.label6);
+            this.panelCine.Controls.Add(this.textBox2);
+            this.panelCine.Controls.Add(this.label7);
+            this.panelCine.Controls.Add(this.label8);
+            this.panelCine.Controls.Add(this.label9);
+            this.panelCine.Controls.Add(this.label10);
+            this.panelCine.Controls.Add(this.btnDesinscribirseCine);
+            this.panelCine.Controls.Add(this.btnInscribirseCine);
+            this.panelCine.Location = new System.Drawing.Point(68, 819);
+            this.panelCine.Name = "panelCine";
+            this.panelCine.Size = new System.Drawing.Size(447, 312);
+            this.panelCine.TabIndex = 18;
             // 
             // pictureBox4
             // 
@@ -1656,27 +1656,27 @@
             this.mspEventos.PerformLayout();
             this.mspRedesSociales.ResumeLayout(false);
             this.mspRedesSociales.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
+            this.panelJyD.ResumeLayout(false);
+            this.panelJyD.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel11.ResumeLayout(false);
-            this.panel16.ResumeLayout(false);
-            this.panel16.PerformLayout();
+            this.panelFeriadelLibro.ResumeLayout(false);
+            this.panelFeriadelLibro.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            this.panel15.ResumeLayout(false);
-            this.panel15.PerformLayout();
+            this.panelCONIA.ResumeLayout(false);
+            this.panelCONIA.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            this.panel14.ResumeLayout(false);
-            this.panel14.PerformLayout();
+            this.panelCharlando.ResumeLayout(false);
+            this.panelCharlando.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            this.panel13.ResumeLayout(false);
-            this.panel13.PerformLayout();
+            this.panelJuegosVR.ResumeLayout(false);
+            this.panelJuegosVR.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
+            this.panelFeriaTeatral.ResumeLayout(false);
+            this.panelFeriaTeatral.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panel12.ResumeLayout(false);
-            this.panel12.PerformLayout();
+            this.panelCine.ResumeLayout(false);
+            this.panelCine.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -1720,7 +1720,7 @@
         private System.Windows.Forms.ToolStripMenuItem mspInstagram;
         private System.Windows.Forms.ToolStripMenuItem mspPrestarEjemplares;
         private System.Windows.Forms.ToolStripMenuItem mspReservarEjemplares;
-        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panelJyD;
         private System.Windows.Forms.Label lblCantidadNumerica;
         private System.Windows.Forms.Label lblCantidad;
         private System.Windows.Forms.Label lblObjetivos;
@@ -1731,7 +1731,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblHorarioNum;
         private System.Windows.Forms.Label lblHorario;
-        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.Panel panelFeriadelLibro;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.TextBox textBox6;
@@ -1742,7 +1742,7 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Button btnDesinscribirseFeriadelLibro;
-        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Panel panelCONIA;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox textBox5;
@@ -1752,7 +1752,7 @@
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Panel panelCharlando;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox textBox4;
@@ -1762,17 +1762,17 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Panel panelJuegosVR;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button btnInscribirseFeriaTeatral;
+        private System.Windows.Forms.Button btnInscribirseJuegosVR;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Panel panelCine;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox2;
@@ -1782,11 +1782,11 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panelFeriaTeatral;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btnInscribirseFeria;
+        private System.Windows.Forms.Button btnInscribirseFeriaTeatral;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label21;

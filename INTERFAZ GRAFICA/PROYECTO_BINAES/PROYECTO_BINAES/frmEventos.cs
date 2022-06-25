@@ -171,22 +171,10 @@ namespace PROYECTO_BINAES
             btnInscribirseCharlando.Visible = true;
         }
 
-        private void btnInscribirseFeriaTeatral_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Te has inscrito éxitosamente", "BINAES - Biblioteca Nacional de El Salvador", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            btnDesinscribirseFeriaTeatral.Visible = true;
-        }
-
-        private void btnDesinscribirseJuegosVR_Click(object sender, EventArgs e)
-        {
-            btnDesinscribirseJuegosVR.Visible = false;
-            btnInscribirseJyD.Visible = true;
-        }
-
         private void btnInscribirseCine_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Te has inscrito éxitosamente", "BINAES - Biblioteca Nacional de El Salvador", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            btnDesinscribirseFeriaTeatral.Visible = true;
+            btnDesinscribirseCine.Visible = true;
         }
 
         private void btnDesinscribirseCine_Click(object sender, EventArgs e)
@@ -195,7 +183,31 @@ namespace PROYECTO_BINAES
             btnInscribirseCine.Visible = true; 
         }
 
-        private void btnInscribirseFeria_Click(object sender, EventArgs e)
+        private void btnInscribirseJyD_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Te has inscrito éxitosamente", "BINAES - Biblioteca Nacional de El Salvador", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            btnDesinscribirseJyD.Visible = true;
+        }
+
+        private void btnDesinscribirseJyD_Click(object sender, EventArgs e)
+        {
+            btnDesinscribirseJyD.Visible = false;
+            btnInscribirseJyD.Visible = true;
+        }
+
+        private void btnInscribirseJuegosVR_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Te has inscrito éxitosamente", "BINAES - Biblioteca Nacional de El Salvador", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            btnDesinscribirseJuegosVR.Visible = true;
+        }
+
+        private void btnDesinscribirseJuegosVR_Click(object sender, EventArgs e)
+        {
+            btnDesinscribirseJuegosVR.Visible = false;
+            btnInscribirseJuegosVR.Visible = true;
+        }
+
+        private void btnInscribirseFeriaTeatral_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Te has inscrito éxitosamente", "BINAES - Biblioteca Nacional de El Salvador", MessageBoxButtons.OK, MessageBoxIcon.Information);
             btnDesinscribirseFeriaTeatral.Visible = true;
@@ -205,18 +217,6 @@ namespace PROYECTO_BINAES
         {
             btnDesinscribirseFeriaTeatral.Visible = false;
             btnInscribirseFeriaTeatral.Visible = true;
-        }
-
-        private void btnInscribirseJyD_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Te has inscrito éxitosamente", "BINAES - Biblioteca Nacional de El Salvador", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            btnInscribirseJyD.Visible = true;
-        }
-
-        private void btnDesinscribirseJyD_Click(object sender, EventArgs e)
-        {
-            btnDesinscribirseJyD.Visible = false;
-            btnInscribirseJyD.Visible = true;
         }
     }
 }
