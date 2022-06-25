@@ -1,6 +1,6 @@
-CREATE DATABASE PROYECTOv15;
+CREATE DATABASE PROYECTOv17;
 GO
-USE PROYECTOv15;
+USE PROYECTOv17;
 GO
 
 -----CREACION DE LAS TABLAS DE ACUERDO AL DIAGRAMA NORMALIZADO
@@ -10,8 +10,6 @@ id INT PRIMARY KEY not null,
 f_h_apertura SMALLDATETIME not null,
 f_h_cierre SMALLDATETIME not null
 );
-
---DROP DATABASE PROYECTOv15
 
 CREATE TABLE HORARIOAREA(
 id INT PRIMARY KEY not null,
@@ -33,9 +31,19 @@ id INT PRIMARY KEY not null,
 nonbre VARCHAR(100) not null
 );
 
+CREATE TABLE PALABRASCLAVE(
+id INT PRIMARY KEY not null,
+palabra VARCHAR(50) not null
+);
+
 CREATE TABLE OCUPACIONUSUARIO(
 id INT PRIMARY KEY not null,
 nombre VARCHAR(100) not null
+);
+
+CREATE TABLE ROL(
+id INT PRIMARY KEY not null,
+texto VARCHAR(50) not null
 );
 
 CREATE TABLE INSTITUCIONUSUARIO(
@@ -71,7 +79,9 @@ codigo INT PRIMARY KEY not null,
 autor VARCHAR(100) not null,
 f_publicacion DATE not null,
 nombre VARCHAR(100) not null,
+id_formatoejemplar INT not null,
 id_editorialejemplar INT not null,
+id_palabrasclave INT not null,
 id_coleccion INT not null
 );
 
@@ -82,7 +92,8 @@ direccion VARCHAR(100) not null,
 nombre VARCHAR(100) not null,
 codigo_ejemplar INT not null,
 id_ocupacionusuario INT not null,
-id_institucionusuario INT not null
+id_institucionusuario INT not null,
+id_rol INT not null
 );
 
 CREATE TABLE SESION(
@@ -148,7 +159,7 @@ codigo_ejemplar INT not null
 
 CREATE TABLE IDIOMAEJEMPLAR(
 id INT PRIMARY KEY not null,
-Espanol VARCHAR(10) not null,
+Español VARCHAR(10) not null,
 Ingles VARCHAR(10) not null,
 Aleman VARCHAR(10) not null,
 Frances VARCHAR(10) not null,
@@ -174,8 +185,16 @@ ADD CONSTRAINT FK_COLECCION_TIPOCOLECCION
 FOREIGN KEY (id_tipocoleccion) REFERENCES TIPOCOLECCION (id);
 
 ALTER TABLE EJEMPLAR
+ADD CONSTRAINT FK_EJEMPLAR_FORMATOEJEMPLAR
+FOREIGN KEY (id_formatoejemplar) REFERENCES FORMATOEJEMPLAR (id);
+
+ALTER TABLE EJEMPLAR
 ADD CONSTRAINT FK_EJEMPLAR_EDITORIALEJEMPLAR
 FOREIGN KEY (id_editorialejemplar) REFERENCES EDITORIALEJEMPLAR (id);
+
+ALTER TABLE EJEMPLAR
+ADD CONSTRAINT FK_EJEMPLAR_PALABRASCLAVE
+FOREIGN KEY (id_palabrasclave) REFERENCES PALABRASCLAVE (id);
 
 ALTER TABLE EJEMPLAR
 ADD CONSTRAINT FK_EJEMPLAR_COLECCION
@@ -188,6 +207,10 @@ FOREIGN KEY (codigo_ejemplar) REFERENCES EJEMPLAR (codigo);
 ALTER TABLE USUARIO
 ADD CONSTRAINT FK_USUARIO_OCUPACIONUSUARIO
 FOREIGN KEY (id_ocupacionusuario) REFERENCES OCUPACIONUSUARIO (id);
+
+ALTER TABLE USUARIO
+ADD CONSTRAINT FK_USUARIO_ROL
+FOREIGN KEY (id_rol) REFERENCES ROL (id);
 
 ALTER TABLE USUARIO
 ADD CONSTRAINT FK_USUARIO_INSTITUCIONUSUARIO
@@ -286,13 +309,13 @@ INSERT INTO
 EDITORIALEJEMPLAR(id, nombre)
 VALUES
 (500, 'De Conatus'),
-(510, 'Hiperiï¿½n'),
-(520, 'Nï¿½rdica'),
+(510, 'Hiperión'),
+(520, 'Nórdica'),
 (530, 'Blackie Books'),
 (540, 'Editorial Mirahadas'),
 (550, 'Santillana'),
 (560, 'Renacimiento'),
-(570, 'Minï¿½scula'),
+(570, 'Minúscula'),
 (580, 'Tabla resumen'),
 (590, 'Visor')
 ;
@@ -307,10 +330,27 @@ VALUES
 ;
 
 INSERT INTO
+PALABRASCLAVE(id, palabra)
+VALUES
+(1, 'Sociedad'),
+(2, 'Economia'),
+(3, 'Discriminacion Etnica'),
+(4, 'Problema de Salud'),
+(5, 'Capitalismo vs Comunismo')
+;
+
+INSERT INTO
 OCUPACIONUSUARIO(id, nombre)
 VALUES
 (41, 'Solo Estudio'),
 (42, 'Solo Trabajo')
+;
+
+INSERT INTO
+ROL(id, texto)
+VALUES
+(4000, 'Administrador'),
+(5000, 'Cliente')
 ;
 
 INSERT INTO
@@ -333,9 +373,9 @@ EVENTO(id, titulo, objetivo, cantidad, id_horarioevento)
 VALUES
 (200, 'Juegos y Diverion', 'Actuar como centro de diversion para los hijos de las personas que exploran el campus', '100', 117),
 (210, 'Feria Teatral', 'Analizar las diferentes perspectivas sobre la organizacion de las mismas', '110', 116),
-(220, 'El Cine de los 80ï¿½s', 'Interpretar los papeles desde la perspectiva de las nuevas visiones de los jovenes', '50', 115),
+(220, 'El Cine de los 80´s', 'Interpretar los papeles desde la perspectiva de las nuevas visiones de los jovenes', '50', 115),
 (230, 'Juegos VR', 'Otorgar un espacio de diversion a nivel casual y semi-competitivo entre los jovenes', '125', 114),
-(240, 'Charlando Tranquilamente', 'Fomentar un espacio en donde se enseï¿½en tecnicas de charla', '75', 113),
+(240, 'Charlando Tranquilamente', 'Fomentar un espacio en donde se enseñen tecnicas de charla', '75', 113),
 (250, 'CONIA', 'Motivar al cuerpo estudiantil sobre posibles campos de estudio', '100', 112),
 (260, 'Feria del Libro', 'Promover el arte de la lectura mediante un divertido dia de libros', '25', 111)
 ;
@@ -343,13 +383,13 @@ VALUES
 INSERT INTO
 AREA(id, nombre, descripcion, nombre_responsable, capacidad, id_horarioarea)
 VALUES
-(71, 'Salones lï¿½dicos', 'Zona para los pequeï¿½os', 'Tulio Triviï¿½o', '150', 10),
-(72, 'Auditï¿½rium', 'Zona para hacer conferencias y trabajos a gran escala', 'Maria Antonieta', '358', 20),
-(73, 'Sala de proyecciï¿½n', 'Zona para estudios y videos', 'Clarence Buttowski', '200', 30),
-(74, 'ï¿½rea de computaciï¿½n', 'Zona para los cursos de informatica', 'Yoel Ramï¿½rez', '40', 40),
-(75, 'ï¿½rea de promociï¿½n de inclusiï¿½n', 'Zona de relajacion', 'Roberto Bolaï¿½os', '30', 50),
-(76, 'Sala de investigaciï¿½n', 'Zona de para reuniones de equipo de trabajo', 'IanFlynn', '100', 60),
-(77, 'ï¿½rea de biblioteca', 'Zona de libros', 'Juan Carlos Bodoque', '250', 70)
+(71, 'Salones lúdicos', 'Zona para los pequeños', 'Tulio Triviño', '150', 10),
+(72, 'Auditórium', 'Zona para hacer conferencias y trabajos a gran escala', 'Maria Antonieta', '358', 20),
+(73, 'Sala de proyección', 'Zona para estudios y videos', 'Clarence Buttowski', '200', 30),
+(74, 'Área de computación', 'Zona para los cursos de informatica', 'Yoel Ramírez', '40', 40),
+(75, 'Área de promoción de inclusión', 'Zona de relajacion', 'Roberto Bolaños', '30', 50),
+(76, 'Sala de investigación', 'Zona de para reuniones de equipo de trabajo', 'IanFlynn', '100', 60),
+(77, 'Área de biblioteca', 'Zona de libros', 'Juan Carlos Bodoque', '250', 70)
 ;
 
 INSERT INTO
@@ -361,83 +401,83 @@ VALUES
 (304, 'Bibliografias', 133),
 (305, 'Mangas y Comics', 134),
 (306, 'Investigaciones Oficializadas', 135),
-(307, 'Los 90ï¿½s', 136),
+(307, 'Los 90´s', 136),
 (308, 'Oscars', 137)
 ;
 
 INSERT INTO
-EJEMPLAR(codigo, autor, f_publicacion, nombre, id_editorialejemplar, id_coleccion)
+EJEMPLAR(codigo, autor, f_publicacion, nombre, id_formatoejemplar, id_editorialejemplar, id_palabrasclave, id_coleccion)
 VALUES
-(001, 'Juan Solï¿½s', '2022/06/15', 'Las claves de una buena demanda contencioso-administrativa', 500, 301),
-(002, 'Alberto Corta', '2022/05/02', 'Las lagrimas de Julieta', 500, 301),
-(003, 'Alvaro Moreno', '2022/05/23', 'Cï¿½mo entender el arte contemporï¿½neo', 500, 301),
-(004, 'Sonia Aguilar', '2022/05/30', 'Emilio Castelar. Mi vida', 500, 301),
-(005, 'Andres Orellana', '2022/05/16', 'Retrato de mujer (Con hombre al fondo)', 510, 301),
-(006, 'Terence Flores', '2010/04/05', 'J BIOL CHEM', 510, 302),
-(007, 'Hegel Roguer', '2006/06/06', 'NATURE', 510, 302),
-(008, 'Antoni Padilla', '1998/02/23', 'PHYS REV B', 510, 302),
-(009, 'Tulio Perez', '2011/12/30', 'ASTROPHYS J', 520, 302),
-(010, 'Andrea Gonzales', '1995/02/14', 'APPL PHYS LETT', 520, 302),
-(011, 'Johnny Depp', '2014/08/25', 'El mï¿½s', 520, 303),
-(012, 'Diego Beria', '1999/03/17', 'El grafico', 520, 303),
-(013, 'Sofia Castaneda', '2020/12/31', 'Diario El Salvdor', 530, 303),
-(014, 'Jhon Lennon', '2001/01/20', 'El Chero', 530, 303),
-(015, 'Cristiano Ronaldo', '2000/01/01', 'El Mundo', 530, 303),
-(016, 'Alejandra Lourdes', '2004/02/02', 'El aï¿½o del mono', 530, 304),
-(017, 'Alberto Colon', '2022/09/18', 'Una tierra prometida', 540, 304),
-(018, 'Jorge Caballero', '1958/11/25', 'A proposito de nada', 540, 304),
-(019, 'Cristina Aguilera', '1997/07/04', 'Hombres', 540, 304),
-(020, 'Marcela Vieria', '2022/06/19', 'Chica de campo', 540, 304),
-(021, 'Jhon Wick', '1985/09/10', 'Manga Dragon Ball', 550, 305),
-(022, 'Henry Escalon', '1999/09/21', 'Manga Naruto', 550, 305),
-(023, 'Nayib Bukele', '2013/04/04', 'Manga Shokugeki No Souma', 550, 305),
-(024, 'Lee Min-Ho', '2009/07/03', 'Manga One Punch Man', 550, 305),
-(025, 'Alberto Palomo', '2014/07/17', 'Manga Domestic Na Kanojo', 560, 305),
-(026, 'Daniela Spalla', '2003/03/25', 'La competitividad empresarial en la regiï¿½n de La Plata, Berisso y Ensenada', 560, 306),
-(027, 'Alberto Gutierrez', '2010/10/21', 'Calidad educativa del nivel secundario en escuelas de la ciudad de La Plata', 560, 306),
-(028, 'Ronaldo Canizales', '2014/10/03', 'Anï¿½lisis de eficiencia municipal: la Municipalidad de Berisso', 560, 306),
-(029, 'Douglas Torres', '2018/12/06', 'Sistemas Integrados de Recursos Empresariales (ERP). Factores para una implementaciï¿½n exitosa', 570, 306),
-(030, 'Daniela Guzman', '2016/11/10', 'La influencia del Contexto en las Actitudes Emprendedoras. Caso de la Provincia de Buenos Aires', 570, 306),
-(031, 'Jhonny Bravo', '2022/04/25', 'Paulo Londra BZRP', 570, 307),
-(032, 'Michael Jackson', '2022/03/03', 'Residente BZRP', 570, 307),
-(033, 'Jackie-chan', '2021/10/28', 'Imagine Dragons', 580, 307),
-(034, 'Guillermo Cortes', '2014/11/03', 'Dancin', 580, 307),
-(035, 'Esteman Williamson', '2009/10/02', 'Billie Jean', 580, 307),
-(036, 'Fatima Rose', '2004/10/29', 'SAW', 580, 308),
-(037, 'Michael Myers', '2005/10/28', 'SAW II', 590, 308),
-(038, 'Mickey Mouse', '2006/10/27', 'SAW III', 590, 308),
-(039, 'John Cena', '2007/10/26', 'SAW IV', 590, 308),
-(040, 'Alberto Kors', '2008/10/24', 'SAW V', 590, 308)
+(001, 'Juan Solís', '2022/06/15', 'Las claves de una buena demanda contencioso-administrativa', 1, 500, 1, 301),
+(002, 'Alberto Corta', '2022/05/02', 'Las lagrimas de Julieta', 1, 500, 1, 301),
+(003, 'Alvaro Moreno', '2022/05/23', 'Cómo entender el arte contemporáneo', 1, 500, 1, 301),
+(004, 'Sonia Aguilar', '2022/05/30', 'Emilio Castelar. Mi vida', 1, 500, 1, 301),
+(005, 'Andres Orellana', '2022/05/16', 'Retrato de mujer (Con hombre al fondo)', 1, 510, 1, 301),
+(006, 'Terence Flores', '2010/04/05', 'J BIOL CHEM', 1, 510, 5, 302),
+(007, 'Hegel Roguer', '2006/06/06', 'NATURE', 1, 510, 5, 302),
+(008, 'Antoni Padilla', '1998/02/23', 'PHYS REV B', 1, 510, 5, 302),
+(009, 'Tulio Perez', '2011/12/30', 'ASTROPHYS J', 1, 520, 5, 302),
+(010, 'Andrea Gonzales', '1995/02/14', 'APPL PHYS LETT', 1, 520, 5, 302),
+(011, 'Johnny Depp', '2014/08/25', 'El más', 2, 520, 3, 303),
+(012, 'Diego Beria', '1999/03/17', 'El grafico', 2, 520, 3, 303),
+(013, 'Sofia Castaneda', '2020/12/31', 'Diario El Salvdor', 2, 530, 3, 303),
+(014, 'Jhon Lennon', '2001/01/20', 'El Chero', 2, 530, 3, 303),
+(015, 'Cristiano Ronaldo', '2000/01/01', 'El Mundo', 2, 530, 3, 303),
+(016, 'Alejandra Lourdes', '2004/02/02', 'El año del mono', 2, 530, 4, 304),
+(017, 'Alberto Colon', '2022/09/18', 'Una tierra prometida', 2, 540, 4, 304),
+(018, 'Jorge Caballero', '1958/11/25', 'A proposito de nada', 2, 540, 4, 304),
+(019, 'Cristina Aguilera', '1997/07/04', 'Hombres', 2, 540, 4, 304),
+(020, 'Marcela Vieria', '2022/06/19', 'Chica de campo', 2, 540, 4, 304),
+(021, 'Jhon Wick', '1985/09/10', 'Manga Dragon Ball', 3, 550, 2, 305),
+(022, 'Henry Escalon', '1999/09/21', 'Manga Naruto', 3, 550, 2, 305),
+(023, 'Nayib Bukele', '2013/04/04', 'Manga Shokugeki No Souma', 3, 550, 2, 305),
+(024, 'Lee Min-Ho', '2009/07/03', 'Manga One Punch Man', 3, 550, 2, 305),
+(025, 'Alberto Palomo', '2014/07/17', 'Manga Domestic Na Kanojo', 3, 560, 2, 305),
+(026, 'Daniela Spalla', '2003/03/25', 'La competitividad empresarial en la región de La Plata, Berisso y Ensenada', 3, 560, 1, 306),
+(027, 'Alberto Gutierrez', '2010/10/21', 'Calidad educativa del nivel secundario en escuelas de la ciudad de La Plata', 3, 560, 2, 306),
+(028, 'Ronaldo Canizales', '2014/10/03', 'Análisis de eficiencia municipal: la Municipalidad de Berisso', 3, 560, 3, 306),
+(029, 'Douglas Torres', '2018/12/06', 'Sistemas Integrados de Recursos Empresariales (ERP). Factores para una implementación exitosa', 3, 570, 4, 306),
+(030, 'Daniela Guzman', '2016/11/10', 'La influencia del Contexto en las Actitudes Emprendedoras. Caso de la Provincia de Buenos Aires', 3, 570, 5, 306),
+(031, 'Jhonny Bravo', '2022/04/25', 'Paulo Londra BZRP', 4, 570, 5, 307),
+(032, 'Michael Jackson', '2022/03/03', 'Residente BZRP', 4, 570, 5, 307),
+(033, 'Jackie-chan', '2021/10/28', 'Imagine Dragons', 4, 580, 5, 307),
+(034, 'Guillermo Cortes', '2014/11/03', 'Dancin', 4, 580, 3, 307),
+(035, 'Esteman Williamson', '2009/10/02', 'Billie Jean', 4, 580, 3, 307),
+(036, 'Fatima Rose', '2004/10/29', 'SAW', 4, 580, 3, 308),
+(037, 'Michael Myers', '2005/10/28', 'SAW II', 4, 590, 2, 308),
+(038, 'Mickey Mouse', '2006/10/27', 'SAW III', 4, 590, 2, 308),
+(039, 'John Cena', '2007/10/26', 'SAW IV', 4, 590, 2, 308),
+(040, 'Alberto Kors', '2008/10/24', 'SAW V', 4, 590, 2, 308)
 ;
 
 INSERT INTO
-USUARIO(carnet, email, direccion, nombre, codigo_ejemplar, id_ocupacionusuario, id_institucionusuario)
+USUARIO(carnet, email, direccion, nombre, codigo_ejemplar, id_ocupacionusuario, id_institucionusuario, id_rol)
 VALUES
-(2010, 'cmcelrath0@earthlink.net', '1 Kropf Circle', 'Clarita McElrath', 040, 42, 10),
-(2020, 'acuschieri1@foxnews.com', '1083 Reinke Park', 'Alford Cuschieri', 040, 42, 10),
-(2030, 'bcancutt2@hhs.gov', '4107 Tony Trail', 'Betta Cancutt', 040, 42, 10),
-(2040, 'hballendine3@friendfeed.com', '448 Sunnyside Place', 'Hattie Ballendine', 039, 41, 9),
-(2050, 'mcombe4@merriam-webster.com', '27 Service Court', 'Marcel Combe', 039, 41, 9),
-(2060, 'mteasell5@moonfruit.com', '47870 Springs Alley', 'Mallory Teasell', 039, 41, 9),
-(2070, 'chenriksson6@nationalgeographic.com', '166 Elmside Terrace', 'Chery Henriksson', 038, 41, 8),
-(2080, 'jkempshall7@vimeo.com', '168 Springview Plaza', 'Jammie Kempshall', 038, 41, 8),
-(2090, 'edewar8@example.com', '5736 Prairieview Place', 'Elroy Dewar', 038, 41, 8),
-(2100, 'mbracer9@youku.com', '049 Bobwhite Road', 'Malina Bracer', 037, 41, 7),
-(2110, 'mgarrocha@blog.com', '759 Ridge Oak Street', 'Mercie Garroch', 037, 41, 7),
-(2120, 'aollivierreb@chron.com', '30 Esch Park', 'Amberly Ollivierre', 037, 41, 7),
-(2130, 'afallenc@rambler.ru', '80559 Grover Park', 'Amie Fallen', 036, 41, 6),
-(2140, 'ctitchmarshd@java.com', '394 Hoard Way', 'Chanda Titchmarsh', 020, 42, 5),
-(2150, 'bormane@edublogs.org', '060 Erie Road', 'Brittani Orman', 018, 42, 4),
-(2160, 'scadwalladerf@irs.gov', '8 Artisan Circle', 'Storm Cadwallader', 016, 42, 3),
-(2170, 'ndouthwaiteg@stanford.edu', '5 Golden Leaf Avenue', 'Noel Douthwaite', 014, 42, 2),
-(2180, 'aibelh@narod.ru', '02 Fair Oaks Avenue', 'Andria Ibel', 012, 42, 1),
-(2190, 'comohuni@economist.com', '0 Fieldstone Point', 'Chad O''Mohun', 010, 41, 2),
-(2200, 'gvedeniktovj@digg.com', '64938 Talmadge Point', 'Geralda Vedeniktov', 008, 41, 3),
-(2210, 'bsolesburyk@163.com', '8802 Mallard Lane', 'Bennie Solesbury', 006, 41, 4),
-(2220, 'jmcquaidl@photobucket.com', '31188 Northfield Crossing', 'Joelynn McQuaid', 004, 41, 5),
-(2230, 'jsetterfieldm@apache.org', '471 Nevada Center', 'Joby Setterfield', 002, 41, 6),
-(2240, 'khamblyn@addtoany.com', '708 Lotheville Drive', 'Kareem Hambly', 032, 42, 7),
-(2250, 'asangero@multiply.com', '827 Amoth Road', 'Alessandra Sanger', 028, 41, 8)
+(2010, 'cmcelrath0@earthlink.net', '1 Kropf Circle', 'Clarita McElrath', 040, 42, 10, 5000),
+(2020, 'acuschieri1@foxnews.com', '1083 Reinke Park', 'Alford Cuschieri', 040, 42, 10, 5000),
+(2030, 'bcancutt2@hhs.gov', '4107 Tony Trail', 'Betta Cancutt', 040, 42, 10, 5000),
+(2040, 'hballendine3@friendfeed.com', '448 Sunnyside Place', 'Hattie Ballendine', 039, 41, 9, 5000),
+(2050, 'mcombe4@merriam-webster.com', '27 Service Court', 'Marcel Combe', 039, 41, 9, 5000),
+(2060, 'mteasell5@moonfruit.com', '47870 Springs Alley', 'Mallory Teasell', 039, 41, 9, 5000),
+(2070, 'chenriksson6@nationalgeographic.com', '166 Elmside Terrace', 'Chery Henriksson', 038, 41, 8, 5000),
+(2080, 'jkempshall7@vimeo.com', '168 Springview Plaza', 'Jammie Kempshall', 038, 41, 8, 5000),
+(2090, 'edewar8@example.com', '5736 Prairieview Place', 'Elroy Dewar', 038, 41, 8, 5000),
+(2100, 'mbracer9@youku.com', '049 Bobwhite Road', 'Malina Bracer', 037, 41, 7, 5000),
+(2110, 'mgarrocha@blog.com', '759 Ridge Oak Street', 'Mercie Garroch', 037, 41, 7, 5000),
+(2120, 'aollivierreb@chron.com', '30 Esch Park', 'Amberly Ollivierre', 037, 41, 7, 5000),
+(2130, 'afallenc@rambler.ru', '80559 Grover Park', 'Amie Fallen', 036, 41, 6, 5000),
+(2140, 'ctitchmarshd@java.com', '394 Hoard Way', 'Chanda Titchmarsh', 020, 42, 5, 4000),
+(2150, 'bormane@edublogs.org', '060 Erie Road', 'Brittani Orman', 018, 42, 4, 4000),
+(2160, 'scadwalladerf@irs.gov', '8 Artisan Circle', 'Storm Cadwallader', 016, 42, 3, 4000),
+(2170, 'ndouthwaiteg@stanford.edu', '5 Golden Leaf Avenue', 'Noel Douthwaite', 014, 42, 2, 4000),
+(2180, 'aibelh@narod.ru', '02 Fair Oaks Avenue', 'Andria Ibel', 012, 42, 1, 4000),
+(2190, 'comohuni@economist.com', '0 Fieldstone Point', 'Chad O''Mohun', 010, 41, 2, 5000),
+(2200, 'gvedeniktovj@digg.com', '64938 Talmadge Point', 'Geralda Vedeniktov', 008, 41, 3, 5000),
+(2210, 'bsolesburyk@163.com', '8802 Mallard Lane', 'Bennie Solesbury', 006, 41, 4, 5000),
+(2220, 'jmcquaidl@photobucket.com', '31188 Northfield Crossing', 'Joelynn McQuaid', 004, 41, 5, 5000),
+(2230, 'jsetterfieldm@apache.org', '471 Nevada Center', 'Joby Setterfield', 002, 41, 6, 5000),
+(2240, 'khamblyn@addtoany.com', '708 Lotheville Drive', 'Kareem Hambly', 032, 42, 7, 5000),
+(2250, 'asangero@multiply.com', '827 Amoth Road', 'Alessandra Sanger', 028, 41, 8, 5000)
 ;
 
 INSERT INTO
@@ -649,7 +689,7 @@ VALUES
 ;
 
 INSERT INTO
-IDIOMAEJEMPLAR(id, Espanol, Ingles, Aleman, Frances, Italiano, Japones, Portugues, Arabe, codigo_ejemplar)
+IDIOMAEJEMPLAR(id, Español, Ingles, Aleman, Frances, Italiano, Japones, Portugues, Arabe, codigo_ejemplar)
 VALUES
 (1, 'DISPONIBLE', 'DISPONIBLE', 'AGOTADO', 'DISPONIBLE', 'AGOTADO', 'DISPONIBLE', 'AGOTADO', 'DISPONIBLE', 040),
 (2, 'AGOTADO', 'DISPONIBLE', 'DISPONIBLE', 'AGOTADO', 'AGOTADO', 'DISPONIBLE', 'AGOTADO', 'AGOTADO', 039),
@@ -692,45 +732,3 @@ VALUES
 (39, 'AGOTADO', 'AGOTADO', 'DISPONIBLE', 'AGOTADO', 'DISPONIBLE', 'DISPONIBLE', 'DISPONIBLE', 'AGOTADO', 002),
 (40, 'DISPONIBLE', 'AGOTADO', 'AGOTADO', 'AGOTADO', 'AGOTADO', 'AGOTADO', 'AGOTADO', 'AGOTADO', 001)
 ;
-
------AHORA ESTARAN LOS RESPECTIVOS SELECTS PARA LA VISUALIZACION DE CADA TABLA
-
-SELECT * FROM HORARIOEVENTO;
-
-SELECT * FROM HORARIOAREA;
-
-SELECT * FROM TIPOCOLECCION;
-
-SELECT * FROM EDITORIALEJEMPLAR;
-
-SELECT * FROM FORMATOEJEMPLAR;
-
-SELECT * FROM OCUPACIONUSUARIO;
-
-SELECT * FROM INSTITUCIONUSUARIO;
-
-SELECT * FROM EVENTO;
-
-SELECT * FROM AREA;
-
-SELECT * FROM COLECCION;
-
-SELECT * FROM EJEMPLAR;
-
-SELECT * FROM USUARIO;
-
-SELECT * FROM SESION;
-
-SELECT * FROM REGISTROASISTENCIA;
-
-SELECT * FROM PRESTAMO;
-
-SELECT * FROM RESERVA;
-
-SELECT * FROM TELEFONOUSUARIO;
-
-SELECT * FROM GENEROCOLECCION;
-
-SELECT * FROM IDENTIFICADOREJEMPLAR;
-
-SELECT * FROM IDIOMAEJEMPLAR;
