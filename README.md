@@ -5,7 +5,7 @@
 > BIBLIOTECA NACIONAL DE EL SALVADOR.
 ---
 
-### CONTENIDO
+### :grey_exclamation: CONTENIDO
 You're sections headers will be used to reference location of destination.
 
 - [Descripcion](#descripcion)
@@ -17,12 +17,12 @@ You're sections headers will be used to reference location of destination.
 
 ---
 
-## Descripcion
+## :grey_exclamation: Descripcion
 
 El programa fue creado para la facilitacion de la busqueda de libros, documentacion y videos,
 para el uso academico.
 
-#### Se Utilizo
+#### :grey_exclamation: Se Utilizo
 
 - Visual Studio 2022
 - JetBrains Rider
@@ -32,7 +32,7 @@ para el uso academico.
 
 ---
 
-## ¿Como se instala?
+## :grey_exclamation: ¿Como se instala?
 
 1. Entrar en el repositorio
 2. Dar click en el boton "CODE" 
@@ -40,7 +40,7 @@ para el uso academico.
 4. Extraemos la carpeta ".ZIP" en algun lugar de tu ordenador
 5. Abrimos los archivos con sus respectivos programas.
 
-#### ¿Que programas debemos de utilizar?
+#### :grey_exclamation: ¿Que programas debemos de utilizar?
 Se recomienda utilizar Visual Studio Community 2022 para la parte de la Interfaz Grafica
 sin embargo podemos utilizar JetBrains Rider.
 
@@ -50,7 +50,7 @@ Se recomienda utilizar Microsoft SQL Server para la parte de la Base De Datos
 
 ---
 
-## Links de descargas
+## :grey_exclamation: Links de descargas
 - [Visual Studio Community 2022](https://visualstudio.microsoft.com/es/vs/)
 - [Microsoft SQL Server](https://www.microsoft.com/es-es/sql-server/sql-server-downloads)
 - [JetBrains Rider](https://www.jetbrains.com/es-es/rider/)
@@ -59,7 +59,7 @@ Se recomienda utilizar Microsoft SQL Server para la parte de la Base De Datos
 
 ---
 
-## Integrantes
+## :grey_exclamation: Integrantes
 
 - 00141621 - [Katherin Gabriela Perez Baires](https://github.com/KGabrielaPB)
 - 00162121 - [Alexandra Beatriz Rivera Mendez](https://github.com/Alexandra-Rivera)
