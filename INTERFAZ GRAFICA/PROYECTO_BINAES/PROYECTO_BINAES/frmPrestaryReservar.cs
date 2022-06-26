@@ -72,7 +72,7 @@ namespace PROYECTO_BINAES
         {
             DataGridViewRow dr = dgv1.CurrentRow;
             string codigo = dr.Cells[0].Value.ToString();
-            if(EjemplaresDAO.ReservarLibro(int.Parse(codigo), 2010))
+            if(EjemplaresDAO.ReservarLibro(int.Parse(codigo), usuario.carnet))
             {
                 MessageBox.Show($"La reserva se ha realizado de manera correcta", "",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -83,7 +83,7 @@ namespace PROYECTO_BINAES
         {
             DataGridViewRow dr = dgv1.CurrentRow;
             string codigo = dr.Cells[0].Value.ToString();
-            if(EjemplaresDAO.PrestarLibro(int.Parse(codigo), 2010)){
+            if(EjemplaresDAO.PrestarLibro(int.Parse(codigo), usuario.carnet)){
                 MessageBox.Show($"La reserva se ha realizado de manera correcta", "",
                    MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -92,6 +92,12 @@ namespace PROYECTO_BINAES
         private void lblMain_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmHistorial frm = new frmHistorial(usuario);
+            frm.Show();
         }
     }
 

@@ -16,7 +16,7 @@ namespace PROYECTO_BINAES
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmPrestaryReservar(null));
+            Application.Run(new frmPrestaryReservar(new Usuario {rol="Cliente",carnet=2010 }));
         }
     }
 }
