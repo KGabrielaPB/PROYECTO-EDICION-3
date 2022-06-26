@@ -213,5 +213,10 @@ namespace PROYECTO_BINAES
             frmPrestaryReservar frm = new frmPrestaryReservar(usuario);
             frm.Show();
         }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

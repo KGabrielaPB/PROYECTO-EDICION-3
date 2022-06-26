@@ -191,6 +191,12 @@
     <Compile Include="frmPrestaryReservar.Designer.cs">
       <DependentUpon>frmPrestaryReservar.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmQR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQR.Designer.cs">
+      <DependentUpon>frmQR.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Prestamo.cs" />
     <Compile Include="Models\Reserva.cs" />
     <Compile Include="Models\Ejemplar.cs" />
@@ -221,6 +227,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrestaryReservar.resx">
       <DependentUpon>frmPrestaryReservar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQR.resx">
+      <DependentUpon>frmQR.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

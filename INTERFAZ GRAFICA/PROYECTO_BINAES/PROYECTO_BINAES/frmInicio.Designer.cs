@@ -36,6 +36,7 @@
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.panelMenuVertical = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.mspRedesSociales = new System.Windows.Forms.MenuStrip();
             this.mspRedesSociales_1 = new System.Windows.Forms.ToolStripMenuItem();
             this.mspFacebook = new System.Windows.Forms.ToolStripMenuItem();
@@ -71,6 +72,9 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.tmrImagenes = new System.Windows.Forms.Timer(this.components);
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panelBarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
@@ -86,6 +90,7 @@
             this.panelContenedor.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picImagenes)).BeginInit();
+            this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelBarraTitulo
@@ -161,6 +166,9 @@
             // panelMenuVertical
             // 
             this.panelMenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.panelMenuVertical.Controls.Add(this.menuStrip2);
+            this.panelMenuVertical.Controls.Add(this.menuStrip1);
+            this.panelMenuVertical.Controls.Add(this.panel1);
             this.panelMenuVertical.Controls.Add(this.mspRedesSociales);
             this.panelMenuVertical.Controls.Add(this.panel7);
             this.panelMenuVertical.Controls.Add(this.panel6);
@@ -176,8 +184,16 @@
             this.panelMenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenuVertical.Location = new System.Drawing.Point(0, 38);
             this.panelMenuVertical.Name = "panelMenuVertical";
-            this.panelMenuVertical.Size = new System.Drawing.Size(220, 612);
+            this.panelMenuVertical.Size = new System.Drawing.Size(222, 612);
             this.panelMenuVertical.TabIndex = 1;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.panel1.Location = new System.Drawing.Point(1, 444);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(5, 32);
+            this.panel1.TabIndex = 19;
             // 
             // mspRedesSociales
             // 
@@ -215,7 +231,7 @@
             this.mspFacebook.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.mspFacebook.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mspFacebook.Name = "mspFacebook";
-            this.mspFacebook.Size = new System.Drawing.Size(158, 30);
+            this.mspFacebook.Size = new System.Drawing.Size(188, 30);
             this.mspFacebook.Text = "Facebook";
             this.mspFacebook.Click += new System.EventHandler(this.mspFacebook_Click);
             // 
@@ -226,7 +242,7 @@
             this.mspTwitter.Image = ((System.Drawing.Image)(resources.GetObject("mspTwitter.Image")));
             this.mspTwitter.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mspTwitter.Name = "mspTwitter";
-            this.mspTwitter.Size = new System.Drawing.Size(158, 30);
+            this.mspTwitter.Size = new System.Drawing.Size(188, 30);
             this.mspTwitter.Text = "Twitter";
             this.mspTwitter.Click += new System.EventHandler(this.mspTwitter_Click);
             // 
@@ -237,7 +253,7 @@
             this.mspInstagram.Image = ((System.Drawing.Image)(resources.GetObject("mspInstagram.Image")));
             this.mspInstagram.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mspInstagram.Name = "mspInstagram";
-            this.mspInstagram.Size = new System.Drawing.Size(158, 30);
+            this.mspInstagram.Size = new System.Drawing.Size(188, 30);
             this.mspInstagram.Text = "Instagram";
             this.mspInstagram.Click += new System.EventHandler(this.mspInstagram_Click);
             // 
@@ -307,7 +323,7 @@
             this.mspServicios_1});
             this.mspServicios.Location = new System.Drawing.Point(9, 140);
             this.mspServicios.Name = "mspServicios";
-            this.mspServicios.Size = new System.Drawing.Size(282, 32);
+            this.mspServicios.Size = new System.Drawing.Size(162, 32);
             this.mspServicios.TabIndex = 14;
             this.mspServicios.Text = "menuStrip3";
             // 
@@ -419,9 +435,9 @@
             this.panelContenedor.Controls.Add(this.label1);
             this.panelContenedor.Controls.Add(this.picImagenes);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedor.Location = new System.Drawing.Point(220, 38);
+            this.panelContenedor.Location = new System.Drawing.Point(222, 38);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1080, 612);
+            this.panelContenedor.Size = new System.Drawing.Size(1078, 612);
             this.panelContenedor.TabIndex = 2;
             // 
             // panel8
@@ -437,7 +453,7 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel8.Location = new System.Drawing.Point(0, 579);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1080, 33);
+            this.panel8.Size = new System.Drawing.Size(1078, 33);
             this.panel8.TabIndex = 10;
             // 
             // radImagen7
@@ -532,7 +548,7 @@
             this.picImagenes.Image = ((System.Drawing.Image)(resources.GetObject("picImagenes.Image")));
             this.picImagenes.Location = new System.Drawing.Point(0, 0);
             this.picImagenes.Name = "picImagenes";
-            this.picImagenes.Size = new System.Drawing.Size(1080, 612);
+            this.picImagenes.Size = new System.Drawing.Size(1078, 612);
             this.picImagenes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picImagenes.TabIndex = 0;
             this.picImagenes.TabStop = false;
@@ -545,6 +561,40 @@
             // tmrImagenes
             // 
             this.tmrImagenes.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip1.Location = new System.Drawing.Point(9, 444);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(202, 24);
+            this.menuStrip1.TabIndex = 20;
+            this.menuStrip1.Text = "menuStrip7";
+            // 
+            // menuStrip2
+            // 
+            this.menuStrip2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.menuStrip2.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1});
+            this.menuStrip2.Location = new System.Drawing.Point(9, 444);
+            this.menuStrip2.Name = "menuStrip2";
+            this.menuStrip2.Size = new System.Drawing.Size(179, 28);
+            this.menuStrip2.TabIndex = 21;
+            this.menuStrip2.Text = "menuStrip6";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripMenuItem1.ForeColor = System.Drawing.Color.White;
+            this.toolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem1.Image")));
+            this.toolStripMenuItem1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(171, 24);
+            this.toolStripMenuItem1.Text = "   GENERA TU QR";
+            this.toolStripMenuItem1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // frmInicio
             // 
@@ -583,6 +633,8 @@
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picImagenes)).EndInit();
+            this.menuStrip2.ResumeLayout(false);
+            this.menuStrip2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -630,6 +682,10 @@
         private System.Windows.Forms.ToolStripMenuItem mspFacebook;
         private System.Windows.Forms.ToolStripMenuItem mspTwitter;
         private System.Windows.Forms.ToolStripMenuItem mspInstagram;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.MenuStrip menuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
     }
 }
 
