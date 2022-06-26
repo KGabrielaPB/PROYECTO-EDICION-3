@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PROYECTOv15ModelStoreContainer" CdmEntityContainer="PROYECTOv15Entities">
+    <EntitySetMapping Name="EVENTO">
+      <EntityTypeMapping TypeName="PROYECTOv15Model.EVENTO">
+        <MappingFragment StoreEntitySet="EVENTO">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="titulo" ColumnName="titulo" />
+          <ScalarProperty Name="objetivo" ColumnName="objetivo" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="id_horarioevento" ColumnName="id_horarioevento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HORARIOEVENTO">
+      <EntityTypeMapping TypeName="PROYECTOv15Model.HORARIOEVENTO">
+        <MappingFragment StoreEntitySet="HORARIOEVENTO">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="f_h_apertura" ColumnName="f_h_apertura" />
+          <ScalarProperty Name="f_h_cierre" ColumnName="f_h_cierre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -702,7 +702,7 @@
             this.mspEventos_1});
             this.mspEventos.Location = new System.Drawing.Point(9, 396);
             this.mspEventos.Name = "mspEventos";
-            this.mspEventos.Size = new System.Drawing.Size(149, 32);
+            this.mspEventos.Size = new System.Drawing.Size(269, 32);
             this.mspEventos.TabIndex = 17;
             this.mspEventos.Text = "menuStrip6";
             // 

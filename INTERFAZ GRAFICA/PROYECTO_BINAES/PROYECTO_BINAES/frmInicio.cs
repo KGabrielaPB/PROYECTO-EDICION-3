@@ -228,7 +228,5 @@ namespace PROYECTO_BINAES
             System.Diagnostics.Process.Start("https://www.instagram.com/");
 
         }
-
-        
     }
 }
