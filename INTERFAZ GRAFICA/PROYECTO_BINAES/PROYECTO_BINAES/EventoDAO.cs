@@ -40,7 +40,7 @@ namespace PROYECTO_BINAES
                     connection.Close();
                 }
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 resultado = false;
             }

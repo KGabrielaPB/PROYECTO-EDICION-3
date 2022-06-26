@@ -62,13 +62,8 @@ namespace PROYECTO_BINAES
             frmInicioDeSesion frm = new frmInicioDeSesion();
             frm.Show(); 
         }
-        //NOSOTROS
-        private void mspNosotros2_Click(object sender, EventArgs e)
-        {
-             
-        }
         //ÁREAS
-        private void mspÁreas_Click(object sender, EventArgs e)
+        private void mspAreas_Click(object sender, EventArgs e)
         {
             frmAreas frm = new frmAreas();
             frm.Show(); 

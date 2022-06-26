@@ -44,10 +44,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panelDecoracionMenu = new System.Windows.Forms.Panel();
             this.picLogo = new System.Windows.Forms.PictureBox();
-            this.mspInicioDeSesion = new System.Windows.Forms.MenuStrip();
-            this.mspIniciodeSesión = new System.Windows.Forms.ToolStripMenuItem();
             this.mspServicios = new System.Windows.Forms.MenuStrip();
             this.mspServicios2 = new System.Windows.Forms.ToolStripMenuItem();
             this.mspPrestarEjemplares = new System.Windows.Forms.ToolStripMenuItem();
@@ -79,7 +76,6 @@
             this.panelMenuVertical.SuspendLayout();
             this.mspAtras.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
-            this.mspInicioDeSesion.SuspendLayout();
             this.mspServicios.SuspendLayout();
             this.mspCatalogo.SuspendLayout();
             this.mspAreas.SuspendLayout();
@@ -177,9 +173,7 @@
             this.panelMenuVertical.Controls.Add(this.panel4);
             this.panelMenuVertical.Controls.Add(this.panel3);
             this.panelMenuVertical.Controls.Add(this.panel2);
-            this.panelMenuVertical.Controls.Add(this.panelDecoracionMenu);
             this.panelMenuVertical.Controls.Add(this.picLogo);
-            this.panelMenuVertical.Controls.Add(this.mspInicioDeSesion);
             this.panelMenuVertical.Controls.Add(this.mspServicios);
             this.panelMenuVertical.Controls.Add(this.mspCatalogo);
             this.panelMenuVertical.Controls.Add(this.mspAreas);
@@ -194,7 +188,7 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel8.Location = new System.Drawing.Point(0, 504);
+            this.panel8.Location = new System.Drawing.Point(0, 435);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(5, 32);
             this.panel8.TabIndex = 11;
@@ -206,7 +200,7 @@
             this.mspAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mspAtras.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mspAtrás2});
-            this.mspAtras.Location = new System.Drawing.Point(8, 504);
+            this.mspAtras.Location = new System.Drawing.Point(8, 435);
             this.mspAtras.Name = "mspAtras";
             this.mspAtras.Size = new System.Drawing.Size(119, 32);
             this.mspAtras.TabIndex = 3;
@@ -226,7 +220,7 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel7.Location = new System.Drawing.Point(1, 445);
+            this.panel7.Location = new System.Drawing.Point(1, 376);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(5, 32);
             this.panel7.TabIndex = 10;
@@ -242,7 +236,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel5.Location = new System.Drawing.Point(1, 384);
+            this.panel5.Location = new System.Drawing.Point(1, 315);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(5, 32);
             this.panel5.TabIndex = 9;
@@ -250,7 +244,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel4.Location = new System.Drawing.Point(1, 325);
+            this.panel4.Location = new System.Drawing.Point(1, 256);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(5, 32);
             this.panel4.TabIndex = 7;
@@ -258,7 +252,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel3.Location = new System.Drawing.Point(1, 267);
+            this.panel3.Location = new System.Drawing.Point(1, 198);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(5, 32);
             this.panel3.TabIndex = 5;
@@ -266,18 +260,10 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel2.Location = new System.Drawing.Point(0, 209);
+            this.panel2.Location = new System.Drawing.Point(0, 140);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(5, 32);
             this.panel2.TabIndex = 3;
-            // 
-            // panelDecoracionMenu
-            // 
-            this.panelDecoracionMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panelDecoracionMenu.Location = new System.Drawing.Point(0, 142);
-            this.panelDecoracionMenu.Name = "panelDecoracionMenu";
-            this.panelDecoracionMenu.Size = new System.Drawing.Size(5, 32);
-            this.panelDecoracionMenu.TabIndex = 0;
             // 
             // picLogo
             // 
@@ -289,38 +275,13 @@
             this.picLogo.TabIndex = 0;
             this.picLogo.TabStop = false;
             // 
-            // mspInicioDeSesion
-            // 
-            this.mspInicioDeSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.mspInicioDeSesion.Dock = System.Windows.Forms.DockStyle.None;
-            this.mspInicioDeSesion.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mspIniciodeSesión});
-            this.mspInicioDeSesion.Location = new System.Drawing.Point(9, 142);
-            this.mspInicioDeSesion.Name = "mspInicioDeSesion";
-            this.mspInicioDeSesion.Size = new System.Drawing.Size(214, 32);
-            this.mspInicioDeSesion.TabIndex = 12;
-            this.mspInicioDeSesion.Text = "menuStrip1";
-            // 
-            // mspIniciodeSesión
-            // 
-            this.mspIniciodeSesión.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mspIniciodeSesión.ForeColor = System.Drawing.Color.White;
-            this.mspIniciodeSesión.Image = ((System.Drawing.Image)(resources.GetObject("mspIniciodeSesión.Image")));
-            this.mspIniciodeSesión.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.mspIniciodeSesión.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.mspIniciodeSesión.Name = "mspIniciodeSesión";
-            this.mspIniciodeSesión.Size = new System.Drawing.Size(206, 28);
-            this.mspIniciodeSesión.Text = "     INICIO DE SESION";
-            this.mspIniciodeSesión.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.mspIniciodeSesión.Click += new System.EventHandler(this.mspIniciodeSesión_Click);
-            // 
             // mspServicios
             // 
             this.mspServicios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.mspServicios.Dock = System.Windows.Forms.DockStyle.None;
             this.mspServicios.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mspServicios2});
-            this.mspServicios.Location = new System.Drawing.Point(9, 209);
+            this.mspServicios.Location = new System.Drawing.Point(9, 140);
             this.mspServicios.Name = "mspServicios";
             this.mspServicios.Size = new System.Drawing.Size(162, 32);
             this.mspServicios.TabIndex = 14;
@@ -370,7 +331,7 @@
             this.mspCatalogo.Dock = System.Windows.Forms.DockStyle.None;
             this.mspCatalogo.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mspCatálogo});
-            this.mspCatalogo.Location = new System.Drawing.Point(9, 267);
+            this.mspCatalogo.Location = new System.Drawing.Point(9, 198);
             this.mspCatalogo.Name = "mspCatalogo";
             this.mspCatalogo.Size = new System.Drawing.Size(161, 32);
             this.mspCatalogo.TabIndex = 15;
@@ -395,7 +356,7 @@
             this.mspAreas.Dock = System.Windows.Forms.DockStyle.None;
             this.mspAreas.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mspÁreas});
-            this.mspAreas.Location = new System.Drawing.Point(9, 325);
+            this.mspAreas.Location = new System.Drawing.Point(9, 256);
             this.mspAreas.Name = "mspAreas";
             this.mspAreas.Size = new System.Drawing.Size(133, 32);
             this.mspAreas.TabIndex = 16;
@@ -419,7 +380,7 @@
             this.mspEventos.Dock = System.Windows.Forms.DockStyle.None;
             this.mspEventos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mspEventos2});
-            this.mspEventos.Location = new System.Drawing.Point(9, 384);
+            this.mspEventos.Location = new System.Drawing.Point(9, 315);
             this.mspEventos.Name = "mspEventos";
             this.mspEventos.Size = new System.Drawing.Size(149, 32);
             this.mspEventos.TabIndex = 17;
@@ -444,7 +405,7 @@
             this.mspContenedorRedesSociales.Dock = System.Windows.Forms.DockStyle.None;
             this.mspContenedorRedesSociales.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mspRedesSociales});
-            this.mspContenedorRedesSociales.Location = new System.Drawing.Point(9, 445);
+            this.mspContenedorRedesSociales.Location = new System.Drawing.Point(9, 376);
             this.mspContenedorRedesSociales.Name = "mspContenedorRedesSociales";
             this.mspContenedorRedesSociales.Size = new System.Drawing.Size(207, 32);
             this.mspContenedorRedesSociales.TabIndex = 18;
@@ -609,8 +570,6 @@
             this.mspAtras.ResumeLayout(false);
             this.mspAtras.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
-            this.mspInicioDeSesion.ResumeLayout(false);
-            this.mspInicioDeSesion.PerformLayout();
             this.mspServicios.ResumeLayout(false);
             this.mspServicios.PerformLayout();
             this.mspCatalogo.ResumeLayout(false);
@@ -645,10 +604,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panelDecoracionMenu;
         private System.Windows.Forms.PictureBox picLogo;
-        private System.Windows.Forms.MenuStrip mspInicioDeSesion;
-        private System.Windows.Forms.ToolStripMenuItem mspIniciodeSesión;
         private System.Windows.Forms.MenuStrip mspServicios;
         private System.Windows.Forms.ToolStripMenuItem mspServicios2;
         private System.Windows.Forms.MenuStrip mspCatalogo;

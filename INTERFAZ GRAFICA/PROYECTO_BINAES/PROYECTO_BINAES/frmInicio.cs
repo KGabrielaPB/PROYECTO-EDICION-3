@@ -15,7 +15,6 @@ namespace PROYECTO_BINAES
     {
         private int tiempo = -1; //variable de conteo de valores
         private int numImagen = 0;
-        private int tiempo2 = 50;
         private Usuario usuario { get; set; }
         public frmInicio(Usuario u )
         {
@@ -42,7 +41,7 @@ namespace PROYECTO_BINAES
         private void frmInicio_Load(object sender, EventArgs e)
         {
             timer1.Start();
-            //timer2.Start();
+           
         }
 
         //CERRAR
