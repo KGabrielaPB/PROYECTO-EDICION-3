@@ -186,18 +186,7 @@ namespace PROYECTO_BINAES
             frm.Show(); 
         }
 
-        //LINK SERVICIOS
-        private void mspPrestarEjemplares_Click(object sender, EventArgs e)
-        {
-            frmPrestaryReservar frm = new frmPrestaryReservar(usuario);
-            frm.Show();
-        }
 
-        private void mspReservadeEjemplares_Click(object sender, EventArgs e)
-        {
-            //frmReservar_Ejemplares frm = new frmReservar_Ejemplares();
-            //frm.Show();
-        }
 
         //MENU DE REDES SOCIALES 
 
@@ -217,6 +206,12 @@ namespace PROYECTO_BINAES
         {
             System.Diagnostics.Process.Start("https://www.instagram.com/");
 
+        }
+
+        private void mspReservadeEjemplares_Click(object sender, EventArgs e)
+        {
+            frmPrestaryReservar frm = new frmPrestaryReservar(usuario);
+            frm.Show();
         }
     }
 }

@@ -307,7 +307,7 @@
             this.mspServicios_1});
             this.mspServicios.Location = new System.Drawing.Point(9, 140);
             this.mspServicios.Name = "mspServicios";
-            this.mspServicios.Size = new System.Drawing.Size(162, 32);
+            this.mspServicios.Size = new System.Drawing.Size(282, 32);
             this.mspServicios.TabIndex = 14;
             this.mspServicios.Text = "menuStrip3";
             // 

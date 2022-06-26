@@ -111,7 +111,7 @@ namespace PROYECTO_BINAES
 
         private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
         {
-            this.type = this.comboBox1.
+            this.type = this.comboBox1.SelectedValue.ToString();
         }
     }
 }
