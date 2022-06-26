@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PROYECTOv15Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="EVENTO">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="titulo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="objetivo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cantidad" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="id_horarioevento" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="HORARIOEVENTO" Relationship="Self.FK_EVENTO_HORARIOEVENTO" FromRole="EVENTO" ToRole="HORARIOEVENTO" />
+  </EntityType>
+  <EntityType Name="HORARIOEVENTO">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="f_h_apertura" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="f_h_cierre" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="EVENTO" Relationship="Self.FK_EVENTO_HORARIOEVENTO" FromRole="HORARIOEVENTO" ToRole="EVENTO" />
+  </EntityType>
+  <Association Name="FK_EVENTO_HORARIOEVENTO">
+    <End Role="HORARIOEVENTO" Type="Self.HORARIOEVENTO" Multiplicity="1" />
+    <End Role="EVENTO" Type="Self.EVENTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HORARIOEVENTO">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="EVENTO">
+        <PropertyRef Name="id_horarioevento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="PROYECTOv15Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="EVENTO" EntityType="Self.EVENTO" />
+    <EntitySet Name="HORARIOEVENTO" EntityType="Self.HORARIOEVENTO" />
+    <AssociationSet Name="FK_EVENTO_HORARIOEVENTO" Association="Self.FK_EVENTO_HORARIOEVENTO">
+      <End Role="HORARIOEVENTO" EntitySet="HORARIOEVENTO" />
+      <End Role="EVENTO" EntitySet="EVENTO" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

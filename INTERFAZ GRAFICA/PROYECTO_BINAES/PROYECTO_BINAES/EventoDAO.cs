@@ -7,36 +7,34 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Resources; 
 
+
 namespace PROYECTO_BINAES
 {
     internal class EventoDAO
-    {
-
-        
-       /* public static bool AgregarEvento()
+    {        
+       public static bool AgregarEvento(int id, string titulo, string objetivo,int cantidad, int id_horarioevento, DateTime f_h_apertura, DateTime f_h_cierre)
         {
             
              bool resultado = true;
 
             try
             {
-                string cadena = resources.conexion_PROYECTOv15;
-
+                TablaEvento.Evento evento = new TablaEvento.Evento(); 
+                string cadena = "Integrated Security = True; Initial Catalog = PROYECTOv15; Data Source = ALEXANDRARIVERA";
                 using (SqlConnection connection = new SqlConnection(cadena)){
-                    string query = "insert into PELICULA (code, titulo, estreno, precio, duracion, stock, descripcion, id_genero, id_director, id_usuario) values " +
-                                   "(@code, @titulo, @estreno, @precio, @duracion, @stock, @descripcion, @id_genero, @id_director, @id_usuario)";
+                    string query = "INSERT INTO EVENTO(id, titulo, objetivo, cantidad)" + "VALUES(@id, @titulo, @objetivo,@cantidad);" + 
+                        "INSERT INTO HORARIOEVENTO (id as idHorarioEvento, f_h_abertura, f_h_cierre) VALUES (@idEventos, @fechaabertura, @fechacierre)"; 
                     SqlCommand command = new SqlCommand(query, connection);
-                    command.Parameters.AddWithValue("@code", nueva.code);
-                    command.Parameters.AddWithValue("@titulo", nueva.titulo);
-                    command.Parameters.AddWithValue("@estreno", nueva.estreno);
-                    command.Parameters.AddWithValue("@precio", nueva.precio);
-                    command.Parameters.AddWithValue("@duracion", nueva.duracion);
-                    command.Parameters.AddWithValue("@stock", nueva.stock);
-                    command.Parameters.AddWithValue("@descripcion", nueva.descripcion);
-                    command.Parameters.AddWithValue("@id_genero", nueva.id_genero);
-                    command.Parameters.AddWithValue("@id_director", nueva.id_director);
-                    command.Parameters.AddWithValue("@id_usuario", nueva.id_usuario);
-                
+                    command.Parameters.AddWithValue("@id", id);
+                    command.Parameters.AddWithValue("@titulo", titulo);
+                    command.Parameters.AddWithValue("@objetivo", objetivo);
+                    command.Parameters.AddWithValue("@cantidad", cantidad);
+                    //command.Parameters.AddWithValue("@id_horarioevento", id_horarioevento);
+                    command.Parameters.AddWithValue("@idEventos", id_horarioevento);
+                    command.Parameters.AddWithValue("@fechaabertura", f_h_apertura);
+                    command.Parameters.AddWithValue("@fechacierre", f_h_cierre);
+
+
                     connection.Open();
                     command.ExecuteNonQuery();
                     connection.Close();
@@ -48,42 +46,40 @@ namespace PROYECTO_BINAES
             }
 
             return resultado;
-        }*/
+        }
 
-        /*public static List<Película> ObtenerTodos()
+        public static List<TablaEvento.Evento> ObtenerEventos()
         {
-            string cadena = Resources.cadena_conexion;
-            List<Película> lista = new List<Película>();
+            List<TablaEvento.Evento> listaEventos = new List<TablaEvento.Evento>();
 
-            using (SqlConnection connection = new SqlConnection(cadena)){
-                string query = "SELECT PELICULA.code, titulo, estreno, precio, duracion, stock, " +
-                               "descripcion, GENERO.nombre AS 'genero', DIRECTOR.nombre AS 'director' " +
-                               "FROM PELICULA " +
-                               "INNER JOIN GENERO ON GENERO.code = PELICULA.id_genero " +
-                               "INNER JOIN DIRECTOR ON DIRECTOR.code = PELICULA.id_director";
+  
+            string cadena = "Integrated Security = True; Initial Catalog = PROYECTOv15; Data Source = ALEXANDRARIVERA"; 
+            using (SqlConnection connection = new SqlConnection(cadena))
+            {
+                string query = "SELECT e.id, e.titulo, e.objetivo, e.cantidad, e.id_horarioevento, h.id as idEvento,h.f_h_apertura, h.f_h_cierre FROM EVENTO e INNER JOIN HORARIOEVENTO h ON e.id_horarioevento = h.id; ";
                 SqlCommand command = new SqlCommand(query, connection);
-                
+
                 connection.Open();
-                using (SqlDataReader reader = command.ExecuteReader()){
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
                     while (reader.Read())
                     {
-                        Película peli = new Película();
-                        peli.code = reader["code"].ToString();
-                        peli.titulo = reader["titulo"].ToString();
-                        peli.estreno = Convert.ToDateTime(reader["estreno"].ToString());
-                        peli.precio = Convert.ToDouble(reader["precio"].ToString());
-                        peli.duracion = Convert.ToInt32(reader["duracion"].ToString());
-                        peli.stock = Convert.ToInt32(reader["stock"].ToString());
-                        peli.descripcion = reader["descripcion"].ToString();
-                        peli.id_genero = reader["genero"].ToString();
-                        peli.id_director = reader["director"].ToString();
-                        lista.Add(peli);
-                    }   }
-                connection.Close();
+                        TablaEvento.Evento nuevoevento = new TablaEvento.Evento();
+                        nuevoevento.Id = Convert.ToInt32(reader["id"].ToString());
+                        nuevoevento.Titulo = reader["titulo"].ToString();
+                        nuevoevento.Objetivo = reader["objetivo"].ToString();
+                        nuevoevento.Cantidad = Convert.ToInt32(reader["cantidad"].ToString());
+                        //nuevoevento.Id_HorarioEvento = Convert.ToInt32(reader["id_horarioevento"].ToString());
+                        nuevoevento.IdHorarioEvento = Convert.ToInt32(reader["idEvento"].ToString());
+                        nuevoevento.F_h_Apertura = Convert.ToDateTime(reader["f_h_apertura"].ToString());
+                        nuevoevento.F_h_Cierre = Convert.ToDateTime(reader["f_h_cierre"].ToString());
+                        listaEventos.Add(nuevoevento); 
+                    }
+                    connection.Close();
+                }
+                return listaEventos;
             }
-            return lista;
+
         }
-             */
-        //}*/
     }
 }

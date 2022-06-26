@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PROYECTOv15Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="EVENTO">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="titulo" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="objetivo" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="cantidad" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="id_horarioevento" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HORARIOEVENTO">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="f_h_apertura" Type="smalldatetime" Nullable="false" />
+    <Property Name="f_h_cierre" Type="smalldatetime" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_EVENTO_HORARIOEVENTO">
+    <End Role="HORARIOEVENTO" Type="Self.HORARIOEVENTO" Multiplicity="1" />
+    <End Role="EVENTO" Type="Self.EVENTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HORARIOEVENTO">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="EVENTO">
+        <PropertyRef Name="id_horarioevento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="PROYECTOv15ModelStoreContainer">
+    <EntitySet Name="EVENTO" EntityType="Self.EVENTO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HORARIOEVENTO" EntityType="Self.HORARIOEVENTO" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_EVENTO_HORARIOEVENTO" Association="Self.FK_EVENTO_HORARIOEVENTO">
+      <End Role="HORARIOEVENTO" EntitySet="HORARIOEVENTO" />
+      <End Role="EVENTO" EntitySet="EVENTO" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
