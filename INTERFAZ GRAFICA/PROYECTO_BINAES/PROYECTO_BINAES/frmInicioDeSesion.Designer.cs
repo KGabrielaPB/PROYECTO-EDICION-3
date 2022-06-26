@@ -39,7 +39,6 @@
             this.btnAcceder = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
@@ -97,6 +96,7 @@
             this.txtContrasena.Size = new System.Drawing.Size(334, 20);
             this.txtContrasena.TabIndex = 2;
             this.txtContrasena.Text = "CONTRASEÑA";
+            this.txtContrasena.TextChanged += new System.EventHandler(this.txtContrasena_TextChanged);
             this.txtContrasena.Enter += new System.EventHandler(this.textBox1_Enter);
             this.txtContrasena.Leave += new System.EventHandler(this.txtContrasena_Leave);
             // 
@@ -120,7 +120,7 @@
             this.btnAcceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAcceder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAcceder.ForeColor = System.Drawing.Color.White;
-            this.btnAcceder.Location = new System.Drawing.Point(243, 232);
+            this.btnAcceder.Location = new System.Drawing.Point(244, 245);
             this.btnAcceder.Name = "btnAcceder";
             this.btnAcceder.Size = new System.Drawing.Size(338, 40);
             this.btnAcceder.TabIndex = 3;
@@ -155,18 +155,7 @@
             this.textBox3.Size = new System.Drawing.Size(334, 20);
             this.textBox3.TabIndex = 7;
             this.textBox3.Text = "_______________________________________________________________";
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(46)))), ((int)(((byte)(129)))));
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.LinkColor = System.Drawing.Color.DarkGray;
-            this.linkLabel1.Location = new System.Drawing.Point(339, 297);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(148, 13);
-            this.linkLabel1.TabIndex = 0;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "¿Haz olvidado la contraseña?";
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // btnCerrar
             // 
@@ -189,7 +178,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(644, 330);
             this.Controls.Add(this.btnCerrar);
-            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.btnAcceder);
@@ -222,7 +210,6 @@
         private System.Windows.Forms.Button btnAcceder;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.PictureBox picLogo;
     }

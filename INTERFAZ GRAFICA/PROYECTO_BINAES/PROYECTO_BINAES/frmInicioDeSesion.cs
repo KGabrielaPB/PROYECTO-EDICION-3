@@ -85,15 +85,15 @@ namespace PROYECTO_BINAES
 
         private void btnAcceder_Click(object sender, EventArgs e)
         {
-           /* string nombre = txtUsuario.Text;
-            string contraseña = txtContraseña.Text;
-            Usuario usu = UsuarioDAO.Existe(nombre, contraseña);
+           string email = txtUsuario.Text;
+            string contraseña = txtContrasena.Text;
+            Usuario usu = UsuarioDAO.revisarCredenciales(email, contraseña);
 
-            if (usu.nombre.Length > 0)
+            if (usu.nombre != null && usu.nombre.Length > 0)
             {
-                MessageBox.Show("Bienvenido!", "Blockbuster",
+                MessageBox.Show($"Bienvenido! {usu.nombre}", "Blockbuster",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
-                frmPrincipal ventana = new frmPrincipal(usu);
+                frmInicio ventana = new frmInicio(usu);
                 ventana.Show();
                 this.Hide();
             }
@@ -101,7 +101,17 @@ namespace PROYECTO_BINAES
             {
                 MessageBox.Show("Credenciales erróneas!", "Blockbuster",
                     MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }*/
+            }
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtContrasena_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

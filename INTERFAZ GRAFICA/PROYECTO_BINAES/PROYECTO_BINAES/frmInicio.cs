@@ -16,11 +16,12 @@ namespace PROYECTO_BINAES
         private int tiempo = -1; //variable de conteo de valores
         private int numImagen = 0;
         private int tiempo2 = 50;
-
-
-        public frmInicio()
+        private Usuario usuario { get; set; }
+        public frmInicio(Usuario u )
         {
+            
             InitializeComponent();
+            this.usuario = u;
 
         }
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
@@ -32,6 +33,10 @@ namespace PROYECTO_BINAES
         private void panelBarraTitulo_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
+            if(usuario.rol == "Administrador")
+            {
+                //menu1.Hide()
+            }
             SendMenssage(this.Handle, 0x112, 0xf012, 0);
         }
         private void frmInicio_Load(object sender, EventArgs e)
@@ -178,7 +183,7 @@ namespace PROYECTO_BINAES
         //LINK AREAS 
         private void mspÁreas_1_Click(object sender, EventArgs e)
         {
-            frmAreas frm = new frmAreas();
+            frmAreas frm = new frmAreas(usuario);
             frm.Show();
         }
 

@@ -13,9 +13,11 @@ namespace PROYECTO_BINAES
 {
     public partial class frmAreas : Form
     {
-        public frmAreas()
+        public Usuario usuario { get; set; }
+        public frmAreas(Usuario u)
         {
             InitializeComponent();
+            this.usuario = u;
         }
 
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
