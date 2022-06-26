@@ -19,7 +19,7 @@ namespace PROYECTO_BINAES
 
             try
             {
-                TablaEvento.Evento evento = new TablaEvento.Evento(); 
+                Evento evento = new Evento(); 
                 string cadena = "Integrated Security = True; Initial Catalog = PROYECTOv15; Data Source = ALEXANDRARIVERA";
                 using (SqlConnection connection = new SqlConnection(cadena)){
                     string query = "INSERT INTO EVENTO(id, titulo, objetivo, cantidad)" + "VALUES(@id, @titulo, @objetivo,@cantidad);" + 
@@ -48,9 +48,9 @@ namespace PROYECTO_BINAES
             return resultado;
         }
 
-        public static List<TablaEvento.Evento> ObtenerEventos()
+        public static List<Evento> ObtenerEventos()
         {
-            List<TablaEvento.Evento> listaEventos = new List<TablaEvento.Evento>();
+            List<Evento> listaEventos = new List<Evento>();
 
   
             string cadena = "Integrated Security = True; Initial Catalog = PROYECTOv15; Data Source = ALEXANDRARIVERA"; 
@@ -64,7 +64,7 @@ namespace PROYECTO_BINAES
                 {
                     while (reader.Read())
                     {
-                        TablaEvento.Evento nuevoevento = new TablaEvento.Evento();
+                        Evento nuevoevento = new Evento();
                         nuevoevento.Id = Convert.ToInt32(reader["id"].ToString());
                         nuevoevento.Titulo = reader["titulo"].ToString();
                         nuevoevento.Objetivo = reader["objetivo"].ToString();

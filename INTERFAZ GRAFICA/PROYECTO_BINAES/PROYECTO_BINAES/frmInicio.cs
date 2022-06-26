@@ -163,21 +163,7 @@ namespace PROYECTO_BINAES
             tiempo = 0;
         }
 
-        //LINK INICIO DE SESION
-        private void iNICIODESESIONToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //this.Hide();  //(para quitar el primer frm y que solo se vea el segundo)
-            frmInicioDeSesion frm = new frmInicioDeSesion();
-            frm.Show();
 
-
-        }
-
-        //LINK NOSOTROS
-        private void nOSOTROSToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-           
-        }
 
         //LINK AREAS 
         private void mspÁreas_1_Click(object sender, EventArgs e)
@@ -189,28 +175,28 @@ namespace PROYECTO_BINAES
         //LINK EVENTOS 
         private void mspEventos_1_Click(object sender, EventArgs e)
         {
-            frmEventos frm = new frmEventos();
+            frmEventos frm = new frmEventos(usuario);
             frm.Show();
         }
 
         //LINK CATÁLOGO
         private void mspCatálogo_1_Click(object sender, EventArgs e)
         {
-            frmCatálogo frm = new frmCatálogo();
+            frmCatálogo frm = new frmCatálogo(usuario);
             frm.Show(); 
         }
 
         //LINK SERVICIOS
         private void mspPrestarEjemplares_Click(object sender, EventArgs e)
         {
-            frmPrestar_Ejemplares frm = new frmPrestar_Ejemplares();
+            frmPrestaryReservar frm = new frmPrestaryReservar(usuario);
             frm.Show();
         }
 
         private void mspReservadeEjemplares_Click(object sender, EventArgs e)
         {
-            frmReservar_Ejemplares frm = new frmReservar_Ejemplares();
-            frm.Show();
+            //frmReservar_Ejemplares frm = new frmReservar_Ejemplares();
+            //frm.Show();
         }
 
         //MENU DE REDES SOCIALES 

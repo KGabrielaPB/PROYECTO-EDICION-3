@@ -16,7 +16,7 @@ namespace PROYECTO_BINAES
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmInicioDeSesion());
+            Application.Run(new frmPrestaryReservar(null));
         }
     }
 }

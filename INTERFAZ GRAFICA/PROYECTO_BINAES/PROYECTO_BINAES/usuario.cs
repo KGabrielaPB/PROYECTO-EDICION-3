@@ -11,5 +11,6 @@ namespace PROYECTO_BINAES
         public string nombre { get; set; }
         public string email { get; set; }
         public string rol { get; set; }
+        public int carnet { get; set; }
     }
 }

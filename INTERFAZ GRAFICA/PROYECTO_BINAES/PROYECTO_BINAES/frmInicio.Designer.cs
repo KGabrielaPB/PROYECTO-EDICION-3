@@ -50,7 +50,6 @@
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.mspServicios = new System.Windows.Forms.MenuStrip();
             this.mspServicios_1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.mspPrestarEjemplares = new System.Windows.Forms.ToolStripMenuItem();
             this.mspReservadeEjemplares = new System.Windows.Forms.ToolStripMenuItem();
             this.mspCatalogo = new System.Windows.Forms.MenuStrip();
             this.mspCatálogo_1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -316,7 +315,6 @@
             // 
             this.mspServicios_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.mspServicios_1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mspPrestarEjemplares,
             this.mspReservadeEjemplares});
             this.mspServicios_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mspServicios_1.ForeColor = System.Drawing.Color.White;
@@ -328,17 +326,6 @@
             this.mspServicios_1.Text = "     SERVICIOS";
             this.mspServicios_1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // mspPrestarEjemplares
-            // 
-            this.mspPrestarEjemplares.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.mspPrestarEjemplares.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.mspPrestarEjemplares.Image = ((System.Drawing.Image)(resources.GetObject("mspPrestarEjemplares.Image")));
-            this.mspPrestarEjemplares.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.mspPrestarEjemplares.Name = "mspPrestarEjemplares";
-            this.mspPrestarEjemplares.Size = new System.Drawing.Size(231, 30);
-            this.mspPrestarEjemplares.Text = "Prestar ejemplares";
-            this.mspPrestarEjemplares.Click += new System.EventHandler(this.mspPrestarEjemplares_Click);
-            // 
             // mspReservadeEjemplares
             // 
             this.mspReservadeEjemplares.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
@@ -346,8 +333,8 @@
             this.mspReservadeEjemplares.Image = ((System.Drawing.Image)(resources.GetObject("mspReservadeEjemplares.Image")));
             this.mspReservadeEjemplares.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mspReservadeEjemplares.Name = "mspReservadeEjemplares";
-            this.mspReservadeEjemplares.Size = new System.Drawing.Size(231, 30);
-            this.mspReservadeEjemplares.Text = "Reservar ejemplares";
+            this.mspReservadeEjemplares.Size = new System.Drawing.Size(216, 30);
+            this.mspReservadeEjemplares.Text = "Reservar y Prestar";
             this.mspReservadeEjemplares.Click += new System.EventHandler(this.mspReservadeEjemplares_Click);
             // 
             // mspCatalogo
@@ -638,7 +625,6 @@
         private System.Windows.Forms.ToolStripMenuItem mspEventos_1;
         private System.Windows.Forms.MenuStrip mspRedesSociales;
         private System.Windows.Forms.ToolStripMenuItem mspRedesSociales_1;
-        private System.Windows.Forms.ToolStripMenuItem mspPrestarEjemplares;
         private System.Windows.Forms.ToolStripMenuItem mspReservadeEjemplares;
         private System.Windows.Forms.ToolStripMenuItem mspCatálogo_1;
         private System.Windows.Forms.ToolStripMenuItem mspFacebook;

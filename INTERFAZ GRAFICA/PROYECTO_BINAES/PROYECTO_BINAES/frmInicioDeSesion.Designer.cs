@@ -40,6 +40,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
@@ -212,5 +213,6 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.PictureBox picLogo;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

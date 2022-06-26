@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PROYECTOv17ModelStoreContainer" CdmEntityContainer="PROYECTOv17Entities1">
+    <EntitySetMapping Name="AREA">
+      <EntityTypeMapping TypeName="PROYECTOv17Model.AREA">
+        <MappingFragment StoreEntitySet="AREA">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="nombre_responsable" ColumnName="nombre_responsable" />
+          <ScalarProperty Name="capacidad" ColumnName="capacidad" />
+          <ScalarProperty Name="id_horarioarea" ColumnName="id_horarioarea" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COLECCION">
+      <EntityTypeMapping TypeName="PROYECTOv17Model.COLECCION">
+        <MappingFragment StoreEntitySet="COLECCION">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="id_tipocoleccion" ColumnName="id_tipocoleccion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EDITORIALEJEMPLAR">
+      <EntityTypeMapping TypeName="PROYECTOv17Model.EDITORIALEJEMPLAR">
+        <MappingFragment StoreEntitySet="EDITORIALEJEMPLAR">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EJEMPLAR">
+      <EntityTypeMapping TypeName="PROYECTOv17Model.EJEMPLAR">
+        <MappingFragment StoreEntitySet="EJEMPLAR">
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="autor" ColumnName="autor" />
+          <ScalarProperty Name="f_publicacion" ColumnName="f_publicacion" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="id_formatoejemplar" ColumnName="id_formatoejemplar" />
+          <ScalarProperty Name="id_editorialejemplar" ColumnName="id_editorialejemplar" />
+          <ScalarProperty Name="id_palabrasclave" ColumnName="id_palabrasclave" />
+          <ScalarProperty Name="id_coleccion" ColumnName="id_coleccion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EVENTO">
+      <EntityTypeMapping TypeName="PROYECTOv17Model.EVENTO">
+        <MappingFragment StoreEntitySet="EVENTO">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="titulo" ColumnName="titulo" />
+          <ScalarProperty Name="objetivo" ColumnName="objetivo" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="id_horarioevento" ColumnName="id_horarioevento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FORMATOEJEMPLAR">
+      <EntityTypeMapping TypeName="PROYECTOv17Model.FORMATOEJEMPLAR">
+        <MappingFragment StoreEntitySet="FORMATOEJEMPLAR">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nonbre" ColumnName="nonbre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GENEROCOLECCION">
+      <EntityTypeMapping TypeName="PROYECTOv17Model.GENEROCOLECCION">
+        <MappingFragment StoreEntitySet="GENEROCOLECCION">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Fantasia" ColumnName="Fantasia" />
+          <ScalarProperty Name="CienciaFiccion" ColumnName="CienciaFiccion" />
+          <ScalarProperty Name="Historia" ColumnName="Historia" />
+          <ScalarProperty Name="Realista" ColumnName="Realista" />
+          <ScalarProperty Name="Romantico" ColumnName="Romantico" />
+          <ScalarProperty Name="Suspenso" ColumnName="Suspenso" />
+          <ScalarProperty Name="Policiaco" ColumnName="Policiaco" />
+          <ScalarProperty Name="Drama" ColumnName="Drama" />
+          <ScalarProperty Name="Psicologico" ColumnName="Psicologico" />
+          <ScalarProperty Name="Comedia" ColumnName="Comedia" />
+          <ScalarProperty Name="id_coleccion" ColumnName="id_coleccion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HORARIOAREA">
+      <EntityTypeMapping TypeName="PROYECTOv17Model.HORARIOAREA">
+        <MappingFragment StoreEntitySet="HORARIOAREA">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="h_abierto" ColumnName="h_abierto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HORARIOEVENTO">
+      <EntityTypeMapping TypeName="PROYECTOv17Model.HORARIOEVENTO">
+        <MappingFragment StoreEntitySet="HORARIOEVENTO">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="f_h_apertura" ColumnName="f_h_apertura" />
+          <ScalarProperty Name="f_h_cierre" ColumnName="f_h_cierre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IDENTIFICADOREJEMPLAR">
+      <EntityTypeMapping TypeName="PROYECTOv17Model.IDENTIFICADOREJEMPLAR">
+        <MappingFragment StoreEntitySet="IDENTIFICADOREJEMPLAR">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+          <ScalarProperty Name="ISSN" ColumnName="ISSN" />
+          <ScalarProperty Name="DOI" ColumnName="DOI" />
+          <ScalarProperty Name="codigo_ejemplar" ColumnName="codigo_ejemplar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IDIOMAEJEMPLAR">
+      <EntityTypeMapping TypeName="PROYECTOv17Model.IDIOMAEJEMPLAR">
+        <MappingFragment StoreEntitySet="IDIOMAEJEMPLAR">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Espanol" ColumnName="Espanol" />
+          <ScalarProperty Name="Ingles" ColumnName="Ingles" />
+          <ScalarProperty Name="Aleman" ColumnName="Aleman" />
+          <ScalarProperty Name="Frances" ColumnName="Frances" />
+          <ScalarProperty Name="Italiano" ColumnName="Italiano" />
+          <ScalarProperty Name="Japones" ColumnName="Japones" />
+          <ScalarProperty Name="Portugues" ColumnName="Portugues" />
+          <ScalarProperty Name="Arabe" ColumnName="Arabe" />
+          <ScalarProperty Name="codigo_ejemplar" ColumnName="codigo_ejemplar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INSTITUCIONUSUARIO">
+      <EntityTypeMapping TypeName="PROYECTOv17Model.INSTITUCIONUSUARIO">
+        <MappingFragment StoreEntitySet="INSTITUCIONUSUARIO">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OCUPACIONUSUARIO">
+      <EntityTypeMapping TypeName="PROYECTOv17Model.OCUPACIONUSUARIO">
+        <MappingFragment StoreEntitySet="OCUPACIONUSUARIO">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PALABRASCLAVE">
+      <EntityTypeMapping TypeName="PROYECTOv17Model.PALABRASCLAVE">
+        <MappingFragment StoreEntitySet="PALABRASCLAVE">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="palabra" ColumnName="palabra" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRESTAMO">
+      <EntityTypeMapping TypeName="PROYECTOv17Model.PRESTAMO">
+        <MappingFragment StoreEntitySet="PRESTAMO">
+          <ScalarProperty Name="carnet_usuario" ColumnName="carnet_usuario" />
+          <ScalarProperty Name="codigo_ejemplar" ColumnName="codigo_ejemplar" />
+          <ScalarProperty Name="f_h_prestamo" ColumnName="f_h_prestamo" />
+          <ScalarProperty Name="f_h_devolucion" ColumnName="f_h_devolucion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="REGISTROASISTENCIA">
+      <EntityTypeMapping TypeName="PROYECTOv17Model.REGISTROASISTENCIA">
+        <MappingFragment StoreEntitySet="REGISTROASISTENCIA">
+          <ScalarProperty Name="carnet_usuario" ColumnName="carnet_usuario" />
+          <ScalarProperty Name="id_area" ColumnName="id_area" />
+          <ScalarProperty Name="id_evento" ColumnName="id_evento" />
+          <ScalarProperty Name="f_h_entrada" ColumnName="f_h_entrada" />
+          <ScalarProperty Name="f_h_salida" ColumnName="f_h_salida" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RESERVA">
+      <EntityTypeMapping TypeName="PROYECTOv17Model.RESERVA">
+        <MappingFragment StoreEntitySet="RESERVA">
+          <ScalarProperty Name="carnet_usuario" ColumnName="carnet_usuario" />
+          <ScalarProperty Name="codigo_ejemplar" ColumnName="codigo_ejemplar" />
+          <ScalarProperty Name="f_h_reserva" ColumnName="f_h_reserva" />
+          <ScalarProperty Name="f_h_devolucion" ColumnName="f_h_devolucion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ROL">
+      <EntityTypeMapping TypeName="PROYECTOv17Model.ROL">
+        <MappingFragment StoreEntitySet="ROL">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="texto" ColumnName="texto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SESION">
+      <EntityTypeMapping TypeName="PROYECTOv17Model.SESION">
+        <MappingFragment StoreEntitySet="SESION">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="f_h_inicio" ColumnName="f_h_inicio" />
+          <ScalarProperty Name="f_h_cierre" ColumnName="f_h_cierre" />
+          <ScalarProperty Name="carnet_usuario" ColumnName="carnet_usuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="PROYECTOv17Model.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TELEFONOUSUARIO">
+      <EntityTypeMapping TypeName="PROYECTOv17Model.TELEFONOUSUARIO">
+        <MappingFragment StoreEntitySet="TELEFONOUSUARIO">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="numero" ColumnName="numero" />
+          <ScalarProperty Name="carnet_usuario" ColumnName="carnet_usuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPOCOLECCION">
+      <EntityTypeMapping TypeName="PROYECTOv17Model.TIPOCOLECCION">
+        <MappingFragment StoreEntitySet="TIPOCOLECCION">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USUARIO">
+      <EntityTypeMapping TypeName="PROYECTOv17Model.USUARIO">
+        <MappingFragment StoreEntitySet="USUARIO">
+          <ScalarProperty Name="carnet" ColumnName="carnet" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="codigo_ejemplar" ColumnName="codigo_ejemplar" />
+          <ScalarProperty Name="id_ocupacionusuario" ColumnName="id_ocupacionusuario" />
+          <ScalarProperty Name="id_institucionusuario" ColumnName="id_institucionusuario" />
+          <ScalarProperty Name="id_rol" ColumnName="id_rol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

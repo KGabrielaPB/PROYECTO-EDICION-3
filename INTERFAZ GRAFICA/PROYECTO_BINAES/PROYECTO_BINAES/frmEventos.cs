@@ -13,9 +13,11 @@ namespace PROYECTO_BINAES
 {
     public partial class frmEventos : Form
     {
-        public frmEventos()
+        Usuario usuario;
+        public frmEventos(Usuario usuario)
         {
             InitializeComponent();
+            this.usuario = usuario;
         }
 
         //Movilizar la ventana
@@ -74,27 +76,27 @@ namespace PROYECTO_BINAES
         //SERVICIOS
         private void mspPrestarEjemplares_Click(object sender, EventArgs e)
         {
-            frmPrestar_Ejemplares frm = new frmPrestar_Ejemplares();
+            frmPrestaryReservar frm = new frmPrestaryReservar(usuario);
             frm.Show();
         }
 
         private void mspReservarEjemplares_Click(object sender, EventArgs e)
         {
-            frmReservar_Ejemplares frm = new frmReservar_Ejemplares();
-            frm.Show();
+            //frmReservar_Ejemplares frm = new frmReservar_Ejemplares();
+            //frm.Show();
         } 
 
         //AREAS
         private void mspÁreas_Click(object sender, EventArgs e)
         {
-            frmAreas frm = new frmAreas();
+            frmAreas frm = new frmAreas(usuario);
             frm.Show(); 
         }
 
         //CATALOGO
         private void mspCatálogo_Click(object sender, EventArgs e)
         {
-            frmCatálogo frm = new frmCatálogo();
+            frmCatálogo frm = new frmCatálogo(usuario);
             frm.Show();
         }
 

@@ -1,0 +1,617 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PROYECTOv17Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AREA">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="descripcion" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="nombre_responsable" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="capacidad" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="id_horarioarea" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="COLECCION">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="id_tipocoleccion" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EDITORIALEJEMPLAR">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EJEMPLAR">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Name="codigo" Type="int" Nullable="false" />
+    <Property Name="autor" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="f_publicacion" Type="date" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="id_formatoejemplar" Type="int" Nullable="false" />
+    <Property Name="id_editorialejemplar" Type="int" Nullable="false" />
+    <Property Name="id_palabrasclave" Type="int" Nullable="false" />
+    <Property Name="id_coleccion" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EVENTO">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="titulo" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="objetivo" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="cantidad" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="id_horarioevento" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FORMATOEJEMPLAR">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="nonbre" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GENEROCOLECCION">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="Fantasia" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="CienciaFiccion" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Historia" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Realista" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Romantico" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Suspenso" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Policiaco" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Drama" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Psicologico" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Comedia" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="id_coleccion" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HORARIOAREA">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="h_abierto" Type="time" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HORARIOEVENTO">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="f_h_apertura" Type="smalldatetime" Nullable="false" />
+    <Property Name="f_h_cierre" Type="smalldatetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IDENTIFICADOREJEMPLAR">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="ISBN" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="ISSN" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="DOI" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="codigo_ejemplar" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IDIOMAEJEMPLAR">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="Espanol" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Ingles" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Aleman" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Frances" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Italiano" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Japones" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Portugues" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Arabe" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="codigo_ejemplar" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="INSTITUCIONUSUARIO">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OCUPACIONUSUARIO">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PALABRASCLAVE">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="palabra" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PRESTAMO">
+    <Key>
+      <PropertyRef Name="carnet_usuario" />
+      <PropertyRef Name="codigo_ejemplar" />
+    </Key>
+    <Property Name="carnet_usuario" Type="int" Nullable="false" />
+    <Property Name="codigo_ejemplar" Type="int" Nullable="false" />
+    <Property Name="f_h_prestamo" Type="smalldatetime" Nullable="false" />
+    <Property Name="f_h_devolucion" Type="smalldatetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="REGISTROASISTENCIA">
+    <Key>
+      <PropertyRef Name="carnet_usuario" />
+      <PropertyRef Name="id_area" />
+      <PropertyRef Name="id_evento" />
+    </Key>
+    <Property Name="carnet_usuario" Type="int" Nullable="false" />
+    <Property Name="id_area" Type="int" Nullable="false" />
+    <Property Name="id_evento" Type="int" Nullable="false" />
+    <Property Name="f_h_entrada" Type="smalldatetime" Nullable="false" />
+    <Property Name="f_h_salida" Type="smalldatetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RESERVA">
+    <Key>
+      <PropertyRef Name="carnet_usuario" />
+      <PropertyRef Name="codigo_ejemplar" />
+    </Key>
+    <Property Name="carnet_usuario" Type="int" Nullable="false" />
+    <Property Name="codigo_ejemplar" Type="int" Nullable="false" />
+    <Property Name="f_h_reserva" Type="smalldatetime" Nullable="false" />
+    <Property Name="f_h_devolucion" Type="smalldatetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ROL">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="texto" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SESION">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="f_h_inicio" Type="smalldatetime" Nullable="false" />
+    <Property Name="f_h_cierre" Type="smalldatetime" Nullable="false" />
+    <Property Name="carnet_usuario" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TELEFONOUSUARIO">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="numero" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="carnet_usuario" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TIPOCOLECCION">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="USUARIO">
+    <Key>
+      <PropertyRef Name="carnet" />
+    </Key>
+    <Property Name="carnet" Type="int" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="direccion" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="codigo_ejemplar" Type="int" Nullable="false" />
+    <Property Name="id_ocupacionusuario" Type="int" Nullable="false" />
+    <Property Name="id_institucionusuario" Type="int" Nullable="false" />
+    <Property Name="id_rol" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_AREA_HORARIOAREA">
+    <End Role="HORARIOAREA" Type="Self.HORARIOAREA" Multiplicity="1" />
+    <End Role="AREA" Type="Self.AREA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HORARIOAREA">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="AREA">
+        <PropertyRef Name="id_horarioarea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COLECCION_TIPOCOLECCION">
+    <End Role="TIPOCOLECCION" Type="Self.TIPOCOLECCION" Multiplicity="1" />
+    <End Role="COLECCION" Type="Self.COLECCION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPOCOLECCION">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="COLECCION">
+        <PropertyRef Name="id_tipocoleccion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EJEMPLAR_COLECCION">
+    <End Role="COLECCION" Type="Self.COLECCION" Multiplicity="1" />
+    <End Role="EJEMPLAR" Type="Self.EJEMPLAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COLECCION">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="EJEMPLAR">
+        <PropertyRef Name="id_coleccion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EJEMPLAR_EDITORIALEJEMPLAR">
+    <End Role="EDITORIALEJEMPLAR" Type="Self.EDITORIALEJEMPLAR" Multiplicity="1" />
+    <End Role="EJEMPLAR" Type="Self.EJEMPLAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EDITORIALEJEMPLAR">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="EJEMPLAR">
+        <PropertyRef Name="id_editorialejemplar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EJEMPLAR_FORMATOEJEMPLAR">
+    <End Role="FORMATOEJEMPLAR" Type="Self.FORMATOEJEMPLAR" Multiplicity="1" />
+    <End Role="EJEMPLAR" Type="Self.EJEMPLAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FORMATOEJEMPLAR">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="EJEMPLAR">
+        <PropertyRef Name="id_formatoejemplar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EJEMPLAR_PALABRASCLAVE">
+    <End Role="PALABRASCLAVE" Type="Self.PALABRASCLAVE" Multiplicity="1" />
+    <End Role="EJEMPLAR" Type="Self.EJEMPLAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PALABRASCLAVE">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="EJEMPLAR">
+        <PropertyRef Name="id_palabrasclave" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EVENTO_HORARIOEVENTO">
+    <End Role="HORARIOEVENTO" Type="Self.HORARIOEVENTO" Multiplicity="1" />
+    <End Role="EVENTO" Type="Self.EVENTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HORARIOEVENTO">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="EVENTO">
+        <PropertyRef Name="id_horarioevento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GENEROCOLECCION_COLECCION">
+    <End Role="COLECCION" Type="Self.COLECCION" Multiplicity="1" />
+    <End Role="GENEROCOLECCION" Type="Self.GENEROCOLECCION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COLECCION">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="GENEROCOLECCION">
+        <PropertyRef Name="id_coleccion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IDENTIFICADOREJEMPLAR_EJEMPLAR">
+    <End Role="EJEMPLAR" Type="Self.EJEMPLAR" Multiplicity="1" />
+    <End Role="IDENTIFICADOREJEMPLAR" Type="Self.IDENTIFICADOREJEMPLAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EJEMPLAR">
+        <PropertyRef Name="codigo" />
+      </Principal>
+      <Dependent Role="IDENTIFICADOREJEMPLAR">
+        <PropertyRef Name="codigo_ejemplar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IDIOMAEJEMPLAR_EJEMPLAR">
+    <End Role="EJEMPLAR" Type="Self.EJEMPLAR" Multiplicity="1" />
+    <End Role="IDIOMAEJEMPLAR" Type="Self.IDIOMAEJEMPLAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EJEMPLAR">
+        <PropertyRef Name="codigo" />
+      </Principal>
+      <Dependent Role="IDIOMAEJEMPLAR">
+        <PropertyRef Name="codigo_ejemplar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PRESTAMO_EJEMPLAR">
+    <End Role="EJEMPLAR" Type="Self.EJEMPLAR" Multiplicity="1" />
+    <End Role="PRESTAMO" Type="Self.PRESTAMO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EJEMPLAR">
+        <PropertyRef Name="codigo" />
+      </Principal>
+      <Dependent Role="PRESTAMO">
+        <PropertyRef Name="codigo_ejemplar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PRESTAMO_USUARIO">
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="1" />
+    <End Role="PRESTAMO" Type="Self.PRESTAMO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIO">
+        <PropertyRef Name="carnet" />
+      </Principal>
+      <Dependent Role="PRESTAMO">
+        <PropertyRef Name="carnet_usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_REGISTROASISTENCIA_AREA">
+    <End Role="AREA" Type="Self.AREA" Multiplicity="1" />
+    <End Role="REGISTROASISTENCIA" Type="Self.REGISTROASISTENCIA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AREA">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="REGISTROASISTENCIA">
+        <PropertyRef Name="id_area" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_REGISTROASISTENCIA_EVENTO">
+    <End Role="EVENTO" Type="Self.EVENTO" Multiplicity="1" />
+    <End Role="REGISTROASISTENCIA" Type="Self.REGISTROASISTENCIA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EVENTO">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="REGISTROASISTENCIA">
+        <PropertyRef Name="id_evento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_REGISTROASISTENCIA_USUARIO">
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="1" />
+    <End Role="REGISTROASISTENCIA" Type="Self.REGISTROASISTENCIA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIO">
+        <PropertyRef Name="carnet" />
+      </Principal>
+      <Dependent Role="REGISTROASISTENCIA">
+        <PropertyRef Name="carnet_usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RESERVA_EJEMPLAR">
+    <End Role="EJEMPLAR" Type="Self.EJEMPLAR" Multiplicity="1" />
+    <End Role="RESERVA" Type="Self.RESERVA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EJEMPLAR">
+        <PropertyRef Name="codigo" />
+      </Principal>
+      <Dependent Role="RESERVA">
+        <PropertyRef Name="codigo_ejemplar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RESERVA_USUARIO">
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="1" />
+    <End Role="RESERVA" Type="Self.RESERVA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIO">
+        <PropertyRef Name="carnet" />
+      </Principal>
+      <Dependent Role="RESERVA">
+        <PropertyRef Name="carnet_usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SESION_USUARIO">
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="1" />
+    <End Role="SESION" Type="Self.SESION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIO">
+        <PropertyRef Name="carnet" />
+      </Principal>
+      <Dependent Role="SESION">
+        <PropertyRef Name="carnet_usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TELEFONOUSUARIO_USUARIO">
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="1" />
+    <End Role="TELEFONOUSUARIO" Type="Self.TELEFONOUSUARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIO">
+        <PropertyRef Name="carnet" />
+      </Principal>
+      <Dependent Role="TELEFONOUSUARIO">
+        <PropertyRef Name="carnet_usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_USUARIO_EJEMPLAR">
+    <End Role="EJEMPLAR" Type="Self.EJEMPLAR" Multiplicity="1" />
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EJEMPLAR">
+        <PropertyRef Name="codigo" />
+      </Principal>
+      <Dependent Role="USUARIO">
+        <PropertyRef Name="codigo_ejemplar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_USUARIO_INSTITUCIONUSUARIO">
+    <End Role="INSTITUCIONUSUARIO" Type="Self.INSTITUCIONUSUARIO" Multiplicity="1" />
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="INSTITUCIONUSUARIO">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="USUARIO">
+        <PropertyRef Name="id_institucionusuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_USUARIO_OCUPACIONUSUARIO">
+    <End Role="OCUPACIONUSUARIO" Type="Self.OCUPACIONUSUARIO" Multiplicity="1" />
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OCUPACIONUSUARIO">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="USUARIO">
+        <PropertyRef Name="id_ocupacionusuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_USUARIO_ROL">
+    <End Role="ROL" Type="Self.ROL" Multiplicity="1" />
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ROL">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="USUARIO">
+        <PropertyRef Name="id_rol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="PROYECTOv17ModelStoreContainer">
+    <EntitySet Name="AREA" EntityType="Self.AREA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="COLECCION" EntityType="Self.COLECCION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EDITORIALEJEMPLAR" EntityType="Self.EDITORIALEJEMPLAR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EJEMPLAR" EntityType="Self.EJEMPLAR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EVENTO" EntityType="Self.EVENTO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FORMATOEJEMPLAR" EntityType="Self.FORMATOEJEMPLAR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GENEROCOLECCION" EntityType="Self.GENEROCOLECCION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HORARIOAREA" EntityType="Self.HORARIOAREA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HORARIOEVENTO" EntityType="Self.HORARIOEVENTO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IDENTIFICADOREJEMPLAR" EntityType="Self.IDENTIFICADOREJEMPLAR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IDIOMAEJEMPLAR" EntityType="Self.IDIOMAEJEMPLAR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="INSTITUCIONUSUARIO" EntityType="Self.INSTITUCIONUSUARIO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OCUPACIONUSUARIO" EntityType="Self.OCUPACIONUSUARIO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PALABRASCLAVE" EntityType="Self.PALABRASCLAVE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PRESTAMO" EntityType="Self.PRESTAMO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="REGISTROASISTENCIA" EntityType="Self.REGISTROASISTENCIA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RESERVA" EntityType="Self.RESERVA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ROL" EntityType="Self.ROL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SESION" EntityType="Self.SESION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TELEFONOUSUARIO" EntityType="Self.TELEFONOUSUARIO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TIPOCOLECCION" EntityType="Self.TIPOCOLECCION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USUARIO" EntityType="Self.USUARIO" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_AREA_HORARIOAREA" Association="Self.FK_AREA_HORARIOAREA">
+      <End Role="HORARIOAREA" EntitySet="HORARIOAREA" />
+      <End Role="AREA" EntitySet="AREA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COLECCION_TIPOCOLECCION" Association="Self.FK_COLECCION_TIPOCOLECCION">
+      <End Role="TIPOCOLECCION" EntitySet="TIPOCOLECCION" />
+      <End Role="COLECCION" EntitySet="COLECCION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EJEMPLAR_COLECCION" Association="Self.FK_EJEMPLAR_COLECCION">
+      <End Role="COLECCION" EntitySet="COLECCION" />
+      <End Role="EJEMPLAR" EntitySet="EJEMPLAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EJEMPLAR_EDITORIALEJEMPLAR" Association="Self.FK_EJEMPLAR_EDITORIALEJEMPLAR">
+      <End Role="EDITORIALEJEMPLAR" EntitySet="EDITORIALEJEMPLAR" />
+      <End Role="EJEMPLAR" EntitySet="EJEMPLAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EJEMPLAR_FORMATOEJEMPLAR" Association="Self.FK_EJEMPLAR_FORMATOEJEMPLAR">
+      <End Role="FORMATOEJEMPLAR" EntitySet="FORMATOEJEMPLAR" />
+      <End Role="EJEMPLAR" EntitySet="EJEMPLAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EJEMPLAR_PALABRASCLAVE" Association="Self.FK_EJEMPLAR_PALABRASCLAVE">
+      <End Role="PALABRASCLAVE" EntitySet="PALABRASCLAVE" />
+      <End Role="EJEMPLAR" EntitySet="EJEMPLAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EVENTO_HORARIOEVENTO" Association="Self.FK_EVENTO_HORARIOEVENTO">
+      <End Role="HORARIOEVENTO" EntitySet="HORARIOEVENTO" />
+      <End Role="EVENTO" EntitySet="EVENTO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GENEROCOLECCION_COLECCION" Association="Self.FK_GENEROCOLECCION_COLECCION">
+      <End Role="COLECCION" EntitySet="COLECCION" />
+      <End Role="GENEROCOLECCION" EntitySet="GENEROCOLECCION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IDENTIFICADOREJEMPLAR_EJEMPLAR" Association="Self.FK_IDENTIFICADOREJEMPLAR_EJEMPLAR">
+      <End Role="EJEMPLAR" EntitySet="EJEMPLAR" />
+      <End Role="IDENTIFICADOREJEMPLAR" EntitySet="IDENTIFICADOREJEMPLAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IDIOMAEJEMPLAR_EJEMPLAR" Association="Self.FK_IDIOMAEJEMPLAR_EJEMPLAR">
+      <End Role="EJEMPLAR" EntitySet="EJEMPLAR" />
+      <End Role="IDIOMAEJEMPLAR" EntitySet="IDIOMAEJEMPLAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRESTAMO_EJEMPLAR" Association="Self.FK_PRESTAMO_EJEMPLAR">
+      <End Role="EJEMPLAR" EntitySet="EJEMPLAR" />
+      <End Role="PRESTAMO" EntitySet="PRESTAMO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRESTAMO_USUARIO" Association="Self.FK_PRESTAMO_USUARIO">
+      <End Role="USUARIO" EntitySet="USUARIO" />
+      <End Role="PRESTAMO" EntitySet="PRESTAMO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_REGISTROASISTENCIA_AREA" Association="Self.FK_REGISTROASISTENCIA_AREA">
+      <End Role="AREA" EntitySet="AREA" />
+      <End Role="REGISTROASISTENCIA" EntitySet="REGISTROASISTENCIA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_REGISTROASISTENCIA_EVENTO" Association="Self.FK_REGISTROASISTENCIA_EVENTO">
+      <End Role="EVENTO" EntitySet="EVENTO" />
+      <End Role="REGISTROASISTENCIA" EntitySet="REGISTROASISTENCIA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_REGISTROASISTENCIA_USUARIO" Association="Self.FK_REGISTROASISTENCIA_USUARIO">
+      <End Role="USUARIO" EntitySet="USUARIO" />
+      <End Role="REGISTROASISTENCIA" EntitySet="REGISTROASISTENCIA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RESERVA_EJEMPLAR" Association="Self.FK_RESERVA_EJEMPLAR">
+      <End Role="EJEMPLAR" EntitySet="EJEMPLAR" />
+      <End Role="RESERVA" EntitySet="RESERVA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RESERVA_USUARIO" Association="Self.FK_RESERVA_USUARIO">
+      <End Role="USUARIO" EntitySet="USUARIO" />
+      <End Role="RESERVA" EntitySet="RESERVA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SESION_USUARIO" Association="Self.FK_SESION_USUARIO">
+      <End Role="USUARIO" EntitySet="USUARIO" />
+      <End Role="SESION" EntitySet="SESION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TELEFONOUSUARIO_USUARIO" Association="Self.FK_TELEFONOUSUARIO_USUARIO">
+      <End Role="USUARIO" EntitySet="USUARIO" />
+      <End Role="TELEFONOUSUARIO" EntitySet="TELEFONOUSUARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_USUARIO_EJEMPLAR" Association="Self.FK_USUARIO_EJEMPLAR">
+      <End Role="EJEMPLAR" EntitySet="EJEMPLAR" />
+      <End Role="USUARIO" EntitySet="USUARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_USUARIO_INSTITUCIONUSUARIO" Association="Self.FK_USUARIO_INSTITUCIONUSUARIO">
+      <End Role="INSTITUCIONUSUARIO" EntitySet="INSTITUCIONUSUARIO" />
+      <End Role="USUARIO" EntitySet="USUARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_USUARIO_OCUPACIONUSUARIO" Association="Self.FK_USUARIO_OCUPACIONUSUARIO">
+      <End Role="OCUPACIONUSUARIO" EntitySet="OCUPACIONUSUARIO" />
+      <End Role="USUARIO" EntitySet="USUARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_USUARIO_ROL" Association="Self.FK_USUARIO_ROL">
+      <End Role="ROL" EntitySet="ROL" />
+      <End Role="USUARIO" EntitySet="USUARIO" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

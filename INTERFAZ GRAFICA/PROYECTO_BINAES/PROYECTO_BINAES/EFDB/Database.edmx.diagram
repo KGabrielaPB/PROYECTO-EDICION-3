@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8ad9a2fa7c4e4b56917693974a18c425" Name="Diagram1">
+        <EntityTypeShape EntityType="PROYECTOv17Model.AREA" Width="1.5" PointX="10.5" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PROYECTOv17Model.COLECCION" Width="1.5" PointX="3" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PROYECTOv17Model.EDITORIALEJEMPLAR" Width="1.5" PointX="3" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PROYECTOv17Model.EJEMPLAR" Width="1.5" PointX="5.25" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PROYECTOv17Model.EVENTO" Width="1.5" PointX="10.5" PointY="25.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PROYECTOv17Model.FORMATOEJEMPLAR" Width="1.5" PointX="3" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PROYECTOv17Model.GENEROCOLECCION" Width="1.5" PointX="5.25" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PROYECTOv17Model.HORARIOAREA" Width="1.5" PointX="8.25" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PROYECTOv17Model.HORARIOEVENTO" Width="1.5" PointX="8.25" PointY="26.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PROYECTOv17Model.IDENTIFICADOREJEMPLAR" Width="1.5" PointX="7.5" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PROYECTOv17Model.IDIOMAEJEMPLAR" Width="1.5" PointX="7.5" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PROYECTOv17Model.INSTITUCIONUSUARIO" Width="1.5" PointX="8.25" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PROYECTOv17Model.OCUPACIONUSUARIO" Width="1.5" PointX="8.25" PointY="20.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PROYECTOv17Model.PALABRASCLAVE" Width="1.5" PointX="3" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="PROYECTOv17Model.PRESTAMO" Width="1.5" PointX="10.5" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PROYECTOv17Model.REGISTROASISTENCIA" Width="1.5" PointX="12.75" PointY="17.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PROYECTOv17Model.RESERVA" Width="1.5" PointX="10.5" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PROYECTOv17Model.ROL" Width="1.5" PointX="8.25" PointY="23" IsExpanded="true" />
+        <EntityTypeShape EntityType="PROYECTOv17Model.SESION" Width="1.5" PointX="12.75" PointY="20.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PROYECTOv17Model.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PROYECTOv17Model.TELEFONOUSUARIO" Width="1.5" PointX="12.75" PointY="23.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PROYECTOv17Model.TIPOCOLECCION" Width="1.5" PointX="0.75" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PROYECTOv17Model.USUARIO" Width="1.5" PointX="10.5" PointY="17.25" IsExpanded="true" />
+        <AssociationConnector Association="PROYECTOv17Model.FK_AREA_HORARIOAREA" ManuallyRouted="false" />
+        <AssociationConnector Association="PROYECTOv17Model.FK_REGISTROASISTENCIA_AREA" ManuallyRouted="false" />
+        <AssociationConnector Association="PROYECTOv17Model.FK_COLECCION_TIPOCOLECCION" ManuallyRouted="false" />
+        <AssociationConnector Association="PROYECTOv17Model.FK_EJEMPLAR_COLECCION" ManuallyRouted="false" />
+        <AssociationConnector Association="PROYECTOv17Model.FK_GENEROCOLECCION_COLECCION" ManuallyRouted="false" />
+        <AssociationConnector Association="PROYECTOv17Model.FK_EJEMPLAR_EDITORIALEJEMPLAR" ManuallyRouted="false" />
+        <AssociationConnector Association="PROYECTOv17Model.FK_EJEMPLAR_FORMATOEJEMPLAR" ManuallyRouted="false" />
+        <AssociationConnector Association="PROYECTOv17Model.FK_EJEMPLAR_PALABRASCLAVE" ManuallyRouted="false" />
+        <AssociationConnector Association="PROYECTOv17Model.FK_IDENTIFICADOREJEMPLAR_EJEMPLAR" ManuallyRouted="false" />
+        <AssociationConnector Association="PROYECTOv17Model.FK_IDIOMAEJEMPLAR_EJEMPLAR" ManuallyRouted="false" />
+        <AssociationConnector Association="PROYECTOv17Model.FK_PRESTAMO_EJEMPLAR" ManuallyRouted="false" />
+        <AssociationConnector Association="PROYECTOv17Model.FK_RESERVA_EJEMPLAR" ManuallyRouted="false" />
+        <AssociationConnector Association="PROYECTOv17Model.FK_USUARIO_EJEMPLAR" ManuallyRouted="false" />
+        <AssociationConnector Association="PROYECTOv17Model.FK_EVENTO_HORARIOEVENTO" ManuallyRouted="false" />
+        <AssociationConnector Association="PROYECTOv17Model.FK_REGISTROASISTENCIA_EVENTO" ManuallyRouted="false" />
+        <AssociationConnector Association="PROYECTOv17Model.FK_USUARIO_INSTITUCIONUSUARIO" ManuallyRouted="false" />
+        <AssociationConnector Association="PROYECTOv17Model.FK_USUARIO_OCUPACIONUSUARIO" ManuallyRouted="false" />
+        <AssociationConnector Association="PROYECTOv17Model.FK_PRESTAMO_USUARIO" ManuallyRouted="false" />
+        <AssociationConnector Association="PROYECTOv17Model.FK_REGISTROASISTENCIA_USUARIO" ManuallyRouted="false" />
+        <AssociationConnector Association="PROYECTOv17Model.FK_RESERVA_USUARIO" ManuallyRouted="false" />
+        <AssociationConnector Association="PROYECTOv17Model.FK_USUARIO_ROL" ManuallyRouted="false" />
+        <AssociationConnector Association="PROYECTOv17Model.FK_SESION_USUARIO" ManuallyRouted="false" />
+        <AssociationConnector Association="PROYECTOv17Model.FK_TELEFONOUSUARIO_USUARIO" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

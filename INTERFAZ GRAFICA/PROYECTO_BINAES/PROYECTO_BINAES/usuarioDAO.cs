@@ -16,7 +16,7 @@ namespace PROYECTO_BINAES
 
             using (SqlConnection connection = new SqlConnection(cadena))
             {
-                string query = "select u.nombre,u.email,r.texto rol from USUARIO u INNER JOIN ROL r ON u.id_rol = r.id WHERE u.email = @email AND password = @password";
+                string query = "select u.nombre,u.email,u.carnet,r.texto rol from USUARIO u INNER JOIN ROL r ON u.id_rol = r.id WHERE u.email = @email AND password = @password";
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@email", usuario);
                 command.Parameters.AddWithValue("@password", contrasennia);
@@ -29,6 +29,7 @@ namespace PROYECTO_BINAES
                         usu.nombre = reader["nombre"].ToString();
                         usu.email = reader["email"].ToString();
                         usu.rol = reader["rol"].ToString();
+                        usu.carnet = Convert.ToInt32(reader["carnet"].ToString());
                     }
                 }
                 connection.Close();

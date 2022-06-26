@@ -13,9 +13,11 @@ namespace PROYECTO_BINAES
 {
     public partial class frmCatálogo : Form
     {
-        public frmCatálogo()
+        Usuario usuario;
+        public frmCatálogo(Usuario usu)
         {
             InitializeComponent();
+            this.usuario = usu;
         }
         //Movilizar la pantalla
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
@@ -56,36 +58,30 @@ namespace PROYECTO_BINAES
             this.WindowState = FormWindowState.Minimized;
         }
 
-        //INICIO DE SESIÓN
-        private void mspIniciodeSesión_Click(object sender, EventArgs e)
-        {
-            frmInicioDeSesion frm = new frmInicioDeSesion();
-            frm.Show(); 
-        }
         //ÁREAS
         private void mspAreas_Click(object sender, EventArgs e)
         {
-            frmAreas frm = new frmAreas();
+            frmAreas frm = new frmAreas(usuario);
             frm.Show(); 
         }
 
         //SERVICIOS
         private void mspPrestarEjemplares_Click(object sender, EventArgs e)
         {
-            frmPrestar_Ejemplares frm = new frmPrestar_Ejemplares();
+            frmPrestaryReservar frm = new frmPrestaryReservar(usuario);
             frm.Show();
         }
 
         private void mspReservarEjemplares_Click(object sender, EventArgs e)
         {
-            frmReservar_Ejemplares frm = new frmReservar_Ejemplares();
-            frm.Show();
+            //frmReservar_Ejemplares frm = new frmReservar_Ejemplares(usuario);
+            //frm.Show();
         }
 
         //EVENTOS
         private void mspEventos2_Click(object sender, EventArgs e)
         {
-            frmEventos frm = new frmEventos();
+            frmEventos frm = new frmEventos(usuario);
             frm.Show();
         }
 

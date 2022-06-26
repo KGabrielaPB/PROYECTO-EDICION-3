@@ -61,44 +61,31 @@ namespace PROYECTO_BINAES
             this.WindowState = FormWindowState.Minimized;
         }
 
-        //INICIO DE SESIÓN
-        private void mspIniciodeSesión_Click(object sender, EventArgs e)
-        {
-            //this.Hide();  //(para quitar el primer frm y que solo se vea el segundo)
-            frmInicioDeSesion frm = new frmInicioDeSesion();
-            frm.Show();
-        }
-
-        //NOSOTROS
-        private void mspNosotros2_Click(object sender, EventArgs e)
-        {
-            
-        }
 
         //SERVICIOS
         private void mspPrestarEjemplares_Click(object sender, EventArgs e)
         {
-            frmPrestar_Ejemplares frm = new frmPrestar_Ejemplares();
+            frmPrestaryReservar frm = new frmPrestaryReservar(usuario);
             frm.Show();
         }
 
         private void mspReservarEjemplares_Click(object sender, EventArgs e)
         {
-            frmReservar_Ejemplares frm = new frmReservar_Ejemplares();
-            frm.Show();
+            //frmReservar_Ejemplares frm = new frmReservar_Ejemplares();
+            //frm.Show();
         }
 
         //EVENTOS
         private void mspEventos2_Click(object sender, EventArgs e)
         {
-            frmEventos frm = new frmEventos();
+            frmEventos frm = new frmEventos(usuario);
             frm.Show();
         }
 
         //CATALOGO
         private void mspCatálogo_Click(object sender, EventArgs e)
         {
-            frmCatálogo frm = new frmCatálogo();
+            frmCatálogo frm = new frmCatálogo(usuario);
             frm.Show();
         }
 
