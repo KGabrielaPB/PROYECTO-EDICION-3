@@ -211,7 +211,7 @@
             this.toolStripMenuItem1.Size = new System.Drawing.Size(171, 24);
             this.toolStripMenuItem1.Text = "   GENERA TU QR";
             this.toolStripMenuItem1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            //this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // menuStrip1
             // 
