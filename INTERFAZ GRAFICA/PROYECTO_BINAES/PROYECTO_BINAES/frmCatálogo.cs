@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Runtime.InteropServices; 
+using System.Runtime.InteropServices;
+using System.Data.SqlClient;
 
 namespace PROYECTO_BINAES
 {
@@ -18,6 +19,7 @@ namespace PROYECTO_BINAES
         {
             InitializeComponent();
             this.usuario = usu;
+            Refresh();
         }
         //Movilizar la pantalla
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
@@ -110,6 +112,57 @@ namespace PROYECTO_BINAES
             this.Dispose();
         }
 
-        
+        private void Refresh()
+        {
+            using (Modelsv3.PROYECTOv17Entities3 dbdb = new Modelsv3.PROYECTOv17Entities3())
+            {
+                var lstlst = (from kk in dbdb.EJEMPLAR
+                              select new Modelsv3.ViewModelv3.VistaTablaEj
+                              {
+                                  codigo = kk.codigo,
+                                  autor = kk.autor,
+                                  nombre = kk.nombre
+                              }).AsQueryable();
+
+                if (!txt77.Text.Trim().Equals(""))
+                {
+                    lstlst = lstlst.Where(kk => kk.nombre.Contains(txt77.Text.Trim()));
+                }
+                if (!txt78.Text.Trim().Equals(""))
+                {
+                    lstlst = lstlst.Where(kk => kk.autor == txt77.Text.Trim());
+                }
+
+                dataGridView77.DataSource = lstlst.ToList();
+            }
+        }
+
+        private void btn77_Click(object sender, EventArgs e)
+        {
+            Refresh();
+        }
+
+        private void frmCatálogo_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'pROYECTOv17DataSetv50.EJEMPLAR' Puede moverla o quitarla según sea necesario.
+            this.eJEMPLARTableAdapter.Fill(this.pROYECTOv17DataSetv50.EJEMPLAR);
+
+        }
+
+        private void txt90_TextChanged(object sender, EventArgs e)
+        {
+            SqlConnection connn = new SqlConnection(Properties.Settings.Default.conexionv60);
+            string query7 = "SELECT * FROM EJEMPLAR WHERE " + cbx74.Text + " like '%" + txt90.Text + "%'";
+            SqlDataAdapter sada = new SqlDataAdapter(query7, connn);
+
+            connn.Open();
+
+            DataSet dadast = new DataSet();
+
+            sada.Fill(dadast, "EJEMPLAR");
+
+            dataGridView77.DataSource = dadast;
+            dataGridView77.DataMember = "EJEMPLAR";
+        }
     }
 }

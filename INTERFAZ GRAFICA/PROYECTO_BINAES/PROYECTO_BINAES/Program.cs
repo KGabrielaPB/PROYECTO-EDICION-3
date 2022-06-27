@@ -11,12 +11,13 @@ namespace PROYECTO_BINAES
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
+        /// 
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmInicioDeSesion());
+            Application.Run(new frmInicio(new Usuario { rol = "Cliente", carnet = 2010} ));
         }
     }
 }

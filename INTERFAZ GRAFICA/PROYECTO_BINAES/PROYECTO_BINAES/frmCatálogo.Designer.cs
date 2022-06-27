@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCatálogo));
             this.panelBarraTitulo = new System.Windows.Forms.Panel();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
@@ -61,7 +62,22 @@
             this.mspTwitter = new System.Windows.Forms.ToolStripMenuItem();
             this.mspInstagram = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
+            this.dataGridView77 = new System.Windows.Forms.DataGridView();
+            this.lbl77 = new System.Windows.Forms.Label();
+            this.lbl78 = new System.Windows.Forms.Label();
+            this.txt77 = new System.Windows.Forms.TextBox();
+            this.txt78 = new System.Windows.Forms.TextBox();
+            this.btn77 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.lbl90 = new System.Windows.Forms.Label();
+            this.txt90 = new System.Windows.Forms.TextBox();
+            this.cbx74 = new System.Windows.Forms.ComboBox();
+            this.pROYECTOv17DataSetv50 = new PROYECTO_BINAES.PROYECTOv17DataSetv50();
+            this.eJEMPLARBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.eJEMPLARTableAdapter = new PROYECTO_BINAES.PROYECTOv17DataSetv50TableAdapters.EJEMPLARTableAdapter();
+            this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idformatoejemplarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idpalabrasclaveDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelBarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
@@ -75,6 +91,10 @@
             this.mspAreas.SuspendLayout();
             this.mspEventos.SuspendLayout();
             this.mspRedesSociales.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView77)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pROYECTOv17DataSetv50)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eJEMPLARBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBarraTitulo
@@ -454,21 +474,153 @@
             this.panel1.Size = new System.Drawing.Size(302, 612);
             this.panel1.TabIndex = 5;
             // 
-            // panel9
+            // dataGridView77
             // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(55)))));
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel9.Location = new System.Drawing.Point(529, 38);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(771, 612);
-            this.panel9.TabIndex = 6;
+            this.dataGridView77.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView77.Location = new System.Drawing.Point(926, 307);
+            this.dataGridView77.Name = "dataGridView77";
+            this.dataGridView77.Size = new System.Drawing.Size(334, 193);
+            this.dataGridView77.TabIndex = 6;
+            // 
+            // lbl77
+            // 
+            this.lbl77.AutoSize = true;
+            this.lbl77.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl77.Location = new System.Drawing.Point(537, 348);
+            this.lbl77.Name = "lbl77";
+            this.lbl77.Size = new System.Drawing.Size(152, 19);
+            this.lbl77.TabIndex = 7;
+            this.lbl77.Text = "Nombre de Ejemplar:";
+            // 
+            // lbl78
+            // 
+            this.lbl78.AutoSize = true;
+            this.lbl78.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl78.Location = new System.Drawing.Point(537, 407);
+            this.lbl78.Name = "lbl78";
+            this.lbl78.Size = new System.Drawing.Size(129, 19);
+            this.lbl78.TabIndex = 8;
+            this.lbl78.Text = "Nombre de Autor:";
+            // 
+            // txt77
+            // 
+            this.txt77.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt77.Location = new System.Drawing.Point(695, 341);
+            this.txt77.Name = "txt77";
+            this.txt77.Size = new System.Drawing.Size(210, 26);
+            this.txt77.TabIndex = 9;
+            // 
+            // txt78
+            // 
+            this.txt78.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt78.Location = new System.Drawing.Point(672, 400);
+            this.txt78.Name = "txt78";
+            this.txt78.Size = new System.Drawing.Size(233, 26);
+            this.txt78.TabIndex = 10;
+            // 
+            // btn77
+            // 
+            this.btn77.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn77.Location = new System.Drawing.Point(792, 469);
+            this.btn77.Name = "btn77";
+            this.btn77.Size = new System.Drawing.Size(113, 31);
+            this.btn77.TabIndex = 11;
+            this.btn77.Text = "FILTRAR";
+            this.btn77.UseVisualStyleBackColor = true;
+            this.btn77.Click += new System.EventHandler(this.btn77_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.codigoDataGridViewTextBoxColumn,
+            this.idformatoejemplarDataGridViewTextBoxColumn,
+            this.idpalabrasclaveDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.eJEMPLARBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(926, 98);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(334, 171);
+            this.dataGridView1.TabIndex = 12;
+            // 
+            // lbl90
+            // 
+            this.lbl90.AutoSize = true;
+            this.lbl90.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl90.Location = new System.Drawing.Point(537, 98);
+            this.lbl90.Name = "lbl90";
+            this.lbl90.Size = new System.Drawing.Size(60, 19);
+            this.lbl90.TabIndex = 13;
+            this.lbl90.Text = "Search:";
+            // 
+            // txt90
+            // 
+            this.txt90.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt90.Location = new System.Drawing.Point(541, 120);
+            this.txt90.Name = "txt90";
+            this.txt90.Size = new System.Drawing.Size(210, 26);
+            this.txt90.TabIndex = 14;
+            this.txt90.TextChanged += new System.EventHandler(this.txt90_TextChanged);
+            // 
+            // cbx74
+            // 
+            this.cbx74.FormattingEnabled = true;
+            this.cbx74.Items.AddRange(new object[] {
+            "codigo",
+            "id_formatoejemplar",
+            "id_palabrasclave"});
+            this.cbx74.Location = new System.Drawing.Point(781, 123);
+            this.cbx74.Name = "cbx74";
+            this.cbx74.Size = new System.Drawing.Size(121, 21);
+            this.cbx74.TabIndex = 15;
+            // 
+            // pROYECTOv17DataSetv50
+            // 
+            this.pROYECTOv17DataSetv50.DataSetName = "PROYECTOv17DataSetv50";
+            this.pROYECTOv17DataSetv50.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // eJEMPLARBindingSource
+            // 
+            this.eJEMPLARBindingSource.DataMember = "EJEMPLAR";
+            this.eJEMPLARBindingSource.DataSource = this.pROYECTOv17DataSetv50;
+            // 
+            // eJEMPLARTableAdapter
+            // 
+            this.eJEMPLARTableAdapter.ClearBeforeFill = true;
+            // 
+            // codigoDataGridViewTextBoxColumn
+            // 
+            this.codigoDataGridViewTextBoxColumn.DataPropertyName = "codigo";
+            this.codigoDataGridViewTextBoxColumn.HeaderText = "codigo";
+            this.codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
+            // 
+            // idformatoejemplarDataGridViewTextBoxColumn
+            // 
+            this.idformatoejemplarDataGridViewTextBoxColumn.DataPropertyName = "id_formatoejemplar";
+            this.idformatoejemplarDataGridViewTextBoxColumn.HeaderText = "id_formatoejemplar";
+            this.idformatoejemplarDataGridViewTextBoxColumn.Name = "idformatoejemplarDataGridViewTextBoxColumn";
+            // 
+            // idpalabrasclaveDataGridViewTextBoxColumn
+            // 
+            this.idpalabrasclaveDataGridViewTextBoxColumn.DataPropertyName = "id_palabrasclave";
+            this.idpalabrasclaveDataGridViewTextBoxColumn.HeaderText = "id_palabrasclave";
+            this.idpalabrasclaveDataGridViewTextBoxColumn.Name = "idpalabrasclaveDataGridViewTextBoxColumn";
             // 
             // frmCatálogo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1300, 650);
-            this.Controls.Add(this.panel9);
+            this.Controls.Add(this.cbx74);
+            this.Controls.Add(this.txt90);
+            this.Controls.Add(this.lbl90);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btn77);
+            this.Controls.Add(this.txt78);
+            this.Controls.Add(this.txt77);
+            this.Controls.Add(this.lbl78);
+            this.Controls.Add(this.lbl77);
+            this.Controls.Add(this.dataGridView77);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelMenuVertical);
             this.Controls.Add(this.panelBarraTitulo);
@@ -477,6 +629,7 @@
             this.Name = "frmCatálogo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Catálogo";
+            this.Load += new System.EventHandler(this.frmCatálogo_Load);
             this.panelBarraTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
@@ -497,7 +650,12 @@
             this.mspEventos.PerformLayout();
             this.mspRedesSociales.ResumeLayout(false);
             this.mspRedesSociales.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView77)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pROYECTOv17DataSetv50)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eJEMPLARBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -535,6 +693,21 @@
         private System.Windows.Forms.ToolStripMenuItem mspPrestarEjemplares;
         private System.Windows.Forms.ToolStripMenuItem mspReservarEjemplares;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.DataGridView dataGridView77;
+        private System.Windows.Forms.Label lbl77;
+        private System.Windows.Forms.Label lbl78;
+        private System.Windows.Forms.TextBox txt77;
+        private System.Windows.Forms.TextBox txt78;
+        private System.Windows.Forms.Button btn77;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label lbl90;
+        private System.Windows.Forms.TextBox txt90;
+        private System.Windows.Forms.ComboBox cbx74;
+        private PROYECTOv17DataSetv50 pROYECTOv17DataSetv50;
+        private System.Windows.Forms.BindingSource eJEMPLARBindingSource;
+        private PROYECTOv17DataSetv50TableAdapters.EJEMPLARTableAdapter eJEMPLARTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idformatoejemplarDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idpalabrasclaveDataGridViewTextBoxColumn;
     }
 }
