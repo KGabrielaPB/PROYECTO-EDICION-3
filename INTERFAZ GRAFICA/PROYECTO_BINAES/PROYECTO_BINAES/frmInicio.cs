@@ -214,9 +214,13 @@ namespace PROYECTO_BINAES
             frm.Show();
         }
 
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
 
+     
+
+        private void menuStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            frmQR frm = new frmQR(usuario);
+            frm.Show();
         }
     }
 }
